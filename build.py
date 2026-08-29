@@ -28,7 +28,7 @@ SCHEMA = """<script type="application/ld+json">
   "url":"%(base)s/",
   "logo":"%(base)s/img/logo.png",
   "image":"%(base)s/img/logo.png",
-  "telephone":"+918692954442",
+  "telephone":"+919082053255",
   "priceRange":"Rs 350 onwards",
   "currenciesAccepted":"INR",
   "paymentAccepted":"Cash, UPI, Card",
@@ -144,10 +144,10 @@ open('dist/404.html','w',encoding='utf-8').write(head + '<body>\n' + header + ""
 
 open('dist/.htaccess','w',encoding='utf-8').write("""# ekam vets
 RewriteEngine On
-RewriteCond %%{HTTPS} off [OR]
-RewriteCond %%{HTTP_HOST} ^www\\. [NC]
-RewriteCond %%{HTTP_HOST} ^(?:www\\.)?(.+)$ [NC]
-RewriteRule ^ https://%%1%%{REQUEST_URI} [L,NE,R=301]
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 
 ErrorDocument 404 /404.html
 DirectoryIndex index.html
