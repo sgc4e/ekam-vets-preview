@@ -307,3 +307,27 @@ ul.checks li:after{content:"";position:absolute;left:6px;top:.62em;width:8px;hei
 .dark .compare .c.plain li{color:#6b645c}
 .compare .c.good{background:rgba(239,230,217,.08);border:1px solid rgba(217,180,143,.3)}
 .dark .compare .c.good h3{color:var(--clay)}
+
+/* ---- language switch + Hindi typography ---- */
+a.lang{border:1px solid rgba(217,180,143,.5);border-radius:999px;padding:6px 14px;
+  font-size:.82rem;color:var(--clay);opacity:1;letter-spacing:.02em}
+a.lang:hover{background:var(--clay);color:var(--neem);text-decoration:none;border-color:var(--clay)}
+html[lang="hi"]{--serif:"Mukta","Noto Sans Devanagari",system-ui,sans-serif}
+html[lang="hi"] h1,html[lang="hi"] h2,html[lang="hi"] h3,html[lang="hi"] h4{font-weight:700;line-height:1.32}
+html[lang="hi"] .brand .name{font-weight:600}
+html[lang="hi"] body{line-height:1.8}
+html[lang="hi"] .hero2 h1 em{font-style:normal;font-weight:700}
+html[lang="hi"] .quote,html[lang="hi"] .pull{font-weight:600}
+html[lang="hi"] .tag{letter-spacing:.08em}
+@media(max-width:900px){a.lang{padding:5px 11px;font-size:.76rem}}
+/* Devanagari: uppercase and wide tracking break the script */
+html[lang="hi"] table.rates th,
+html[lang="hi"] .eyebrow,
+html[lang="hi"] form.book label,
+html[lang="hi"] footer.site h4,
+html[lang="hi"] .brand .tag,
+html[lang="hi"] .statband span{letter-spacing:normal;text-transform:none}
+html[lang="hi"] table.rates th{font-size:.82rem}
+html[lang="hi"] .eyebrow{font-size:.82rem}
+html[lang="hi"] footer.site h4{font-size:.86rem}
+html[lang="hi"] .brand .tag{font-size:.68rem}
