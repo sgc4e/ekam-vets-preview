@@ -331,3 +331,23 @@ html[lang="hi"] table.rates th{font-size:.82rem}
 html[lang="hi"] .eyebrow{font-size:.82rem}
 html[lang="hi"] footer.site h4{font-size:.86rem}
 html[lang="hi"] .brand .tag{font-size:.68rem}
+
+/* ---- blog ---- */
+.postgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+a.postcard{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;color:var(--ink)}
+a.postcard:hover{text-decoration:none;box-shadow:0 12px 34px rgba(31,61,51,.10);transform:translateY(-2px)}
+a.postcard{transition:box-shadow .18s ease,transform .18s ease}
+a.postcard img{width:100%;height:190px;object-fit:cover;display:block}
+a.postcard .pc{padding:26px 26px 30px}
+a.postcard .cat{display:inline-block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--terracotta);margin-bottom:12px;font-weight:600}
+a.postcard h3{font-size:1.14rem;margin-bottom:.45em;line-height:1.28}
+a.postcard p{font-size:.94rem;color:#5b544c;margin:0}
+html[lang="hi"] a.postcard .cat{letter-spacing:normal;text-transform:none;font-size:.8rem}
+.post h2{font-size:1.5rem;margin:44px 0 .5em}
+.post p{font-size:1.03rem}
+.post ul.ticks{margin:0 0 26px}
+.post strong{color:var(--neem);font-weight:600}
+.pagehead .narrow p{max-width:62ch}
+@media(max-width:960px){.postgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.postgrid{grid-template-columns:1fr}}
