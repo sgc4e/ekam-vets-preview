@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="Cupped hands holding a small form, drawn as arcs">
+<rect width="640" height="440" fill="#F7F2EA"/>
+<circle cx="500" cy="90" r="110" fill="#D9B48F" opacity=".28"/>
+<g fill="none" stroke="#1F3D33" stroke-width="10" stroke-linecap="round">
+  <path d="M150 250c0 70 60 120 170 120s170-50 170-120"/>
+  <path d="M110 236c0 96 80 164 210 164s210-68 210-164"/>
+</g>
+<circle cx="320" cy="222" r="52" fill="#B85C38"/>
+<g fill="none" stroke="#B85C38" stroke-width="5" opacity=".55">
+  <circle cx="320" cy="222" r="84"/><circle cx="320" cy="222" r="116"/>
+</g>
+<g fill="none" stroke="#1F3D33" stroke-width="5" opacity=".5">
+  <path d="M320 150c0-42 14-72 34-90 20 18 34 48 34 90"/>
+  <path d="M320 150c0-42-14-72-34-90-20 18-34 48-34 90"/>
+</g>
+</svg>

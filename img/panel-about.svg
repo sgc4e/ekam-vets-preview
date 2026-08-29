@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="Two interlocking arcs, two partners, one practice">
+<rect width="640" height="440" fill="#F7F2EA"/>
+<circle cx="560" cy="90" r="100" fill="#4F6F4A" opacity=".16"/>
+<g fill="none" stroke-width="16" stroke-linecap="round">
+  <path d="M180 340a110 110 0 0 1 0-220" stroke="#1F3D33"/>
+  <path d="M180 120a110 110 0 0 1 0 220" stroke="#1F3D33" opacity=".28"/>
+  <path d="M330 340a110 110 0 0 1 0-220" stroke="#B85C38" opacity=".28"/>
+  <path d="M330 120a110 110 0 0 1 0 220" stroke="#B85C38"/>
+</g>
+<circle cx="255" cy="230" r="30" fill="#D9B48F"/>
+<g fill="none" stroke="#1F3D33" stroke-width="6" opacity=".5">
+  <path d="M470 300c0-40 14-68 32-84 18 16 32 44 32 84"/>
+  <path d="M430 300c4-30 20-50 42-56 4 22-2 42-16 56"/>
+  <path d="M574 300c-4-30-20-50-42-56-4 22 2 42 16 56"/>
+</g>
+</svg>

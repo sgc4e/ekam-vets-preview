@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="A clinic signboard beside an arched doorway">
+<rect width="640" height="440" fill="#EFE6D9"/>
+<rect y="360" width="640" height="80" fill="#E0D0B8"/>
+<path d="M370 360V216a90 90 0 0 1 180 0v144z" fill="#1F3D33"/>
+<path d="M394 360V220a66 66 0 0 1 132 0v140z" fill="#D9B48F" opacity=".55"/>
+<rect x="60" y="120" width="250" height="130" rx="10" fill="#1F3D33"/>
+<g fill="none" stroke="#EFE6D9" stroke-width="6" opacity=".9">
+  <path d="M150 200c0-26 9-44 22-55 13 11 22 29 22 55"/>
+  <path d="M119 200c3-20 15-33 31-37 3 15-2 28-12 37"/>
+  <path d="M225 200c-3-20-15-33-31-37-3 15 2 28 12 37"/>
+</g>
+<path d="M100 224h170" stroke="#B85C38" stroke-width="7" stroke-linecap="round"/>
+<rect x="176" y="250" width="18" height="110" fill="#1F3D33"/>
+<g fill="none" stroke="#B85C38" stroke-width="6" opacity=".7"><circle cx="560" cy="110" r="40"/></g>
+</svg>

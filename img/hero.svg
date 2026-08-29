@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="An arched clinic window in warm afternoon light">
+<defs>
+  <clipPath id="a"><path d="M300 460V240a300 300 0 0 1 600 0v220z"/></clipPath>
+  <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF5EC"/><stop offset="1" stop-color="#E4D2B8"/></linearGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#EFE6D9"/><stop offset="1" stop-color="#E8DCCA"/></linearGradient>
+</defs>
+<rect width="1200" height="520" fill="url(#g)"/>
+<circle cx="180" cy="120" r="150" fill="#D9B48F" opacity=".22"/>
+<circle cx="1050" cy="400" r="190" fill="#B85C38" opacity=".10"/>
+<g clip-path="url(#a)">
+  <rect x="300" y="-60" width="600" height="520" fill="url(#s)"/>
+  <circle cx="712" cy="180" r="62" fill="#D9B48F" opacity=".9"/>
+  <path d="M300 460c70-84 140-114 210-114s136 32 190 114z" fill="#C9B79B" opacity=".5"/>
+  <path d="M540 460c56-64 116-92 186-92s136 30 186 92z" fill="#B5A288" opacity=".45"/>
+  <g fill="#4F6F4A" opacity=".8">
+    <path d="M356 460c-20-58-10-116 24-156 26 44 26 108 8 156z"/>
+    <path d="M398 460c-8-48 8-92 40-118 12 44 4 90-16 118z"/>
+    <path d="M834 460c18-52 8-102-22-138-22 40-22 96-6 138z"/>
+  </g>
+</g>
+<path d="M300 460V240a300 300 0 0 1 600 0v220" fill="none" stroke="#1F3D33" stroke-width="13"/>
+<path d="M600 460V-40" stroke="#1F3D33" stroke-width="8"/>
+<path d="M312 288h576" stroke="#1F3D33" stroke-width="8"/>
+<rect x="282" y="452" width="636" height="15" rx="7" fill="#1F3D33"/>
+<rect y="467" width="1200" height="53" fill="#E0D0B8"/>
+<g stroke="#1F3D33" stroke-width="7" fill="none" stroke-linecap="round" opacity=".85">
+  <path d="M150 452V346"/><path d="M120 452h60"/>
+  <path d="M150 372c-26-6-40-24-38-48 24-2 40 12 44 34"/>
+  <path d="M150 372c26-6 40-24 38-48-24-2-40 12-44 34"/>
+</g>
+<g stroke="#B85C38" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9">
+  <path d="M1042 452V368"/><path d="M1014 452h56"/>
+  <path d="M1042 392c-24-8-34-26-30-46 22 2 34 16 36 36"/>
+</g>
+</svg>

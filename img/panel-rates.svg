@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="A printed rate card with ruled price lines">
+<rect width="640" height="440" fill="#EFE6D9"/>
+<circle cx="90" cy="80" r="110" fill="#D9B48F" opacity=".3"/>
+<g transform="rotate(-4 320 220)">
+  <rect x="150" y="60" width="340" height="330" rx="12" fill="#F7F2EA" stroke="#1F3D33" stroke-width="7"/>
+  <path d="M186 116h130" stroke="#B85C38" stroke-width="9" stroke-linecap="round"/>
+  <g stroke="#1F3D33" stroke-width="6" stroke-linecap="round" opacity=".55">
+    <path d="M186 168h180"/><path d="M186 212h150"/><path d="M186 256h190"/><path d="M186 300h120"/><path d="M186 344h165"/>
+  </g>
+  <g stroke="#1F3D33" stroke-width="8" stroke-linecap="round">
+    <path d="M410 168h44"/><path d="M410 212h44"/><path d="M410 256h44"/><path d="M410 300h44"/><path d="M410 344h44"/>
+  </g>
+</g>
+<circle cx="560" cy="370" r="46" fill="#B85C38" opacity=".85"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="A field of lotus marks, one of them terracotta">
+<rect width="1200" height="420" fill="#1F3D33"/>
+<g fill="none" stroke="#EFE6D9" stroke-width="4" opacity=".28">
+<g id="p"><path d="M40 90c0-32 11-54 28-67 17 13 28 35 28 67"/><path d="M2 90c4-24 19-41 39-46 4 19-2 35-15 46"/><path d="M134 90c-4-24-19-41-39-46-4 19 2 35 15 46"/></g>
+<use href="#p" x="150"/><use href="#p" x="300"/><use href="#p" x="450"/><use href="#p" x="600"/><use href="#p" x="750"/><use href="#p" x="900"/><use href="#p" x="1050"/>
+<use href="#p" x="75" y="140"/><use href="#p" x="225" y="140"/><use href="#p" x="375" y="140"/><use href="#p" x="675" y="140"/><use href="#p" x="825" y="140"/><use href="#p" x="975" y="140"/><use href="#p" x="1125" y="140"/>
+<use href="#p" x="0" y="280"/><use href="#p" x="150" y="280"/><use href="#p" x="300" y="280"/><use href="#p" x="450" y="280"/><use href="#p" x="600" y="280"/><use href="#p" x="750" y="280"/><use href="#p" x="900" y="280"/><use href="#p" x="1050" y="280"/>
+</g>
+<g fill="none" stroke="#B85C38" stroke-width="6"><use href="#p" x="525" y="140"/></g>
+<circle cx="593" cy="196" r="13" fill="#D9B48F"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="A vessel and leaves, medicine and plant together">
+<rect width="640" height="440" fill="#F7F2EA"/>
+<circle cx="150" cy="110" r="120" fill="#B85C38" opacity=".16"/>
+<path d="M200 250h240c0 80-54 130-120 130s-120-50-120-130z" fill="#1F3D33"/>
+<rect x="176" y="228" width="288" height="26" rx="13" fill="#1F3D33"/>
+<g fill="none" stroke="#4F6F4A" stroke-width="9" stroke-linecap="round">
+  <path d="M320 228V120"/>
+</g>
+<path d="M320 168c-40-4-64-28-62-62 34-4 58 18 62 62z" fill="#4F6F4A"/>
+<path d="M320 196c40-4 64-28 62-62-34-4-58 18-62 62z" fill="#4F6F4A" opacity=".75"/>
+<g fill="none" stroke="#D9B48F" stroke-width="7">
+  <circle cx="520" cy="330" r="46"/><circle cx="520" cy="330" r="76" opacity=".6"/>
+</g>
+</svg>

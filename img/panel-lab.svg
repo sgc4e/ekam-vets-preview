@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="Sample vessels and a ruled report, drawn flat">
+<rect width="640" height="440" fill="#F7F2EA"/>
+<rect x="0" y="300" width="640" height="140" fill="#E4D7C3"/>
+<g>
+  <rect x="90" y="120" width="52" height="200" rx="26" fill="none" stroke="#1F3D33" stroke-width="9"/>
+  <path d="M99 250h34v52a17 17 0 0 1-34 0z" fill="#B85C38"/>
+  <rect x="170" y="160" width="52" height="160" rx="26" fill="none" stroke="#1F3D33" stroke-width="9"/>
+  <path d="M179 262h34v40a17 17 0 0 1-34 0z" fill="#4F6F4A"/>
+  <rect x="250" y="190" width="52" height="130" rx="26" fill="none" stroke="#1F3D33" stroke-width="9"/>
+  <path d="M259 272h34v30a17 17 0 0 1-34 0z" fill="#D9B48F"/>
+</g>
+<rect x="370" y="100" width="200" height="250" rx="10" fill="#EFE6D9" stroke="#1F3D33" stroke-width="7"/>
+<g stroke="#1F3D33" stroke-width="6" stroke-linecap="round" opacity=".6">
+  <path d="M400 150h140"/><path d="M400 186h110"/><path d="M400 222h140"/><path d="M400 258h90"/><path d="M400 294h130"/>
+</g>
+<circle cx="556" cy="112" r="26" fill="#B85C38"/>
+</svg>

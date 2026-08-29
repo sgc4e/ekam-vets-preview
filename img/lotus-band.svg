@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" role="img" aria-label="A band of lotus petal forms">
+<rect width="1200" height="120" fill="none"/>
+<g fill="none" stroke="#1F3D33" stroke-width="4" opacity=".38">
+<g id="u">
+  <path d="M60 96c0-34 12-58 30-72 18 14 30 38 30 72"/>
+  <path d="M18 96c4-26 20-44 42-50 4 20-2 38-16 50"/>
+  <path d="M162 96c-4-26-20-44-42-50-4 20 2 38 16 50"/>
+</g>
+<use href="#u" x="180"/><use href="#u" x="360"/><use href="#u" x="540"/>
+<use href="#u" x="720"/><use href="#u" x="900"/><use href="#u" x="1080"/>
+<use href="#u" x="-180"/>
+</g>
+</svg>

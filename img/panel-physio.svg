@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="A sequence of rising arcs showing returning movement">
+<rect width="640" height="440" fill="#EFE6D9"/>
+<circle cx="120" cy="360" r="140" fill="#4F6F4A" opacity=".14"/>
+<g fill="none" stroke="#1F3D33" stroke-width="9" stroke-linecap="round">
+  <path d="M70 350c40-14 66-42 76-84"/>
+  <path d="M180 350c56-20 92-60 106-118"/>
+  <path d="M320 350c72-26 118-78 136-152"/>
+</g>
+<g fill="none" stroke="#B85C38" stroke-width="9" stroke-linecap="round">
+  <path d="M470 350c88-32 144-96 166-186"/>
+</g>
+<g fill="#B85C38"><circle cx="146" cy="266" r="11"/><circle cx="286" cy="232" r="11"/><circle cx="456" cy="198" r="11"/><circle cx="636" cy="164" r="11"/></g>
+<path d="M40 386h580" stroke="#1F3D33" stroke-width="7" stroke-linecap="round"/>
+<g fill="none" stroke="#D9B48F" stroke-width="6" opacity=".9">
+  <path d="M60 120c26 0 46 18 46 40"/><path d="M60 92c42 0 74 30 74 68"/>
+</g>
+</svg>

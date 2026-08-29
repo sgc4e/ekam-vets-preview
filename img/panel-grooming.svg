@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-label="Water drops and combed lines">
+<rect width="640" height="440" fill="#EFE6D9"/>
+<circle cx="540" cy="360" r="150" fill="#D9B48F" opacity=".3"/>
+<g fill="none" stroke="#1F3D33" stroke-width="8" stroke-linecap="round" opacity=".85">
+  <path d="M60 150c60 0 60 60 120 60s60-60 120-60 60 60 120 60 60-60 120-60"/>
+  <path d="M60 220c60 0 60 60 120 60s60-60 120-60 60 60 120 60 60-60 120-60"/>
+  <path d="M60 290c60 0 60 60 120 60s60-60 120-60 60 60 120 60 60-60 120-60"/>
+</g>
+<g fill="#B85C38">
+  <path d="M180 60c26 30 40 50 40 66a40 40 0 0 1-80 0c0-16 14-36 40-66z"/>
+  <path d="M420 66c20 23 30 38 30 50a30 30 0 0 1-60 0c0-12 10-27 30-50z" opacity=".7"/>
+</g>
+</svg>

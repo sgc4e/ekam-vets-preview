@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-label="Stacked question and answer forms">
+<rect width="640" height="380" fill="#F7F2EA"/>
+<circle cx="70" cy="330" r="120" fill="#B85C38" opacity=".12"/>
+<g>
+  <rect x="120" y="60" width="330" height="56" rx="28" fill="#1F3D33"/>
+  <rect x="190" y="140" width="330" height="56" rx="28" fill="#D9B48F"/>
+  <rect x="120" y="220" width="270" height="56" rx="28" fill="#1F3D33" opacity=".55"/>
+  <rect x="190" y="300" width="200" height="56" rx="28" fill="#B85C38"/>
+</g>
+</svg>
