@@ -136,6 +136,13 @@ this cost real debugging time. Current version is **v16**, so the next edit uses
    the SPA never routes, so Security → SSL is unreachable by URL or menu. If SSL needs
    installing, SG has to do it from his own browser session.
 
+
+9. **Image files can upload as mode 600 and 403 on the web.** Files brought over from the Mac
+   via the device bridge arrive `-rw-------`, rsync preserves that, and Apache then refuses
+   them. The logo and favicon 403'd on the live site this way while every HTML page returned
+   200. `deploy.sh` now passes `--chmod=D755,F644`. If an asset 404s or 403s, check
+   permissions before you check paths.
+
 ---
 
 ## 6. The booking form
