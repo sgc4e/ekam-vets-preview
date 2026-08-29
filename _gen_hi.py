@@ -53,7 +53,9 @@ for f in sorted(glob.glob('*.html')):
     h = h.replace('<html lang="en">', '<html lang="hi">')
     h = re.sub(r'href="style\.css([^"]*)"', r'href="../style.css\1"', h)
     h = h.replace('href="img/', 'href="../img/').replace('src="img/', 'src="../img/')
-    h = h.replace('<a class="lang" href="hi/%s">हिंदी</a>' % f, '<a class="lang" href="../%s">English</a>' % f)
+    h = re.sub(r'<a class="lang" href="[^"]*">[^<]*</a>', '<a class="lang" href="../%s">English</a>' % f, h)
+    h = re.sub(r'hreflang="en" href="[^"]*"', 'hreflang="en" href="../%s"' % f, h)
+    h = re.sub(r'hreflang="hi" href="[^"]*"', 'hreflang="hi" href="%s"' % f, h)
     open('hi/' + f, 'w', encoding='utf-8').write(h)
 
 seen = set(); out = []
