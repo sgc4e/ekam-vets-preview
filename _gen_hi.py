@@ -25,8 +25,8 @@ for f in sorted(glob.glob('*.html')):
     # --- translate ---
     def tr_text(m):
         raw = m.group(1); t = raw.strip()
-        if SKIP.match(t) or keep_asis(t): return m.group(0)
         if t in D: return '>' + raw.replace(t, D[t]) + '<'
+        if SKIP.match(t) or keep_asis(t): return m.group(0)
         missing.append((f, t)); return m.group(0)
 
     parts = h.split('<body>')
@@ -36,8 +36,8 @@ for f in sorted(glob.glob('*.html')):
     for attr in ('alt', 'placeholder'):
         def tr_attr(m, a=attr):
             t = m.group(1).strip()
-            if not t or keep_asis(t): return m.group(0)
             if t in D: return '%s="%s"' % (a, D[t])
+            if not t or keep_asis(t): return m.group(0)
             missing.append((f, t)); return m.group(0)
         body = re.sub(attr + r'="([^"]*)"', tr_attr, body)
 
