@@ -51,6 +51,7 @@ for f in sorted(glob.glob('*.html')):
     h = head + '<body>' + body
     # --- paths + lang ---
     h = h.replace('<html lang="en">', '<html lang="hi">')
+    h = h.replace('name="lang" value="en"', 'name="lang" value="hi"')
     h = re.sub(r'href="style\.css([^"]*)"', r'href="../style.css\1"', h)
     h = h.replace('href="img/', 'href="../img/').replace('src="img/', 'src="../img/')
     h = re.sub(r'<a class="lang" href="[^"]*">[^<]*</a>', '<a class="lang" href="../%s">English</a>' % f, h)

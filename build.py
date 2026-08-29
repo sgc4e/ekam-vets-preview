@@ -18,6 +18,7 @@ os.makedirs('dist/hi', exist_ok=True)
 os.makedirs('dist/img', exist_ok=True)
 for f in glob.glob('img/*'): shutil.copy2(f, 'dist/img/')
 shutil.copy2('style.css', 'dist/style.css')
+if os.path.exists('send.php'): shutil.copy2('send.php', 'dist/send.php')
 
 SCHEMA = """<script type="application/ld+json">
 {
@@ -68,8 +69,10 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     if name == 'index.html': url = url[:-len('index.html')]
 
     # robots
-    if NOINDEX:
+    if NOINDEX or name == 'thanks.html':
         s = re.sub(r'<meta name="robots"[^>]*>', '<meta name="robots" content="noindex, nofollow">', s)
+        if 'name="robots"' not in s:
+            s = s.replace('<link rel="icon"', '<meta name="robots" content="noindex, nofollow">\n<link rel="icon"', 1)
     else:
         s = re.sub(r'\s*<meta name="robots"[^>]*>', '', s)
 
@@ -100,7 +103,7 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
 # sitemap with hreflang pairs
 rows = []
 for url, name, hi in pages:
-    if hi: continue
+    if hi or name == 'thanks.html': continue
     en = '%s/%s' % (BASE, '' if name == 'index.html' else name)
     hin = '%s/hi/%s' % (BASE, '' if name == 'index.html' else name)
     rows.append("""  <url>

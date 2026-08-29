@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="visit.html">
 <link rel="alternate" hreflang="hi" href="hi/visit.html">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -49,7 +49,9 @@
       <div>
         <h2>Book a slot</h2>
         <hr class="rule">
-        <form class="book" onsubmit="event.preventDefault();document.getElementById('done').hidden=false;this.reset();">
+        <form class="book" method="post" action="/send.php">
+          <input type="hidden" name="lang" value="en">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
           <label for="n">Your name</label>
           <input id="n" name="n" required placeholder="Name">
 
@@ -77,8 +79,9 @@
           <label for="m">Tell us what is going on</label>
           <textarea id="m" name="m" placeholder="When it started, what changed, what you have already given"></textarea>
 
-          <button class="btn" type="submit">Request the slot</button>
-          <p id="done" hidden class="note" style="margin-top:16px;color:#4F6F4A">Request noted. The clinic will confirm on WhatsApp. This is a demo form and does not send anything yet.</p>
+          <button class="btn dark" type="submit">Request the slot</button>
+          <a class="btn line" style="margin-left:10px" href="https://wa.me/919082053255?text=Hello%20ekam%20vets%2C%20I%20would%20like%20to%20book%20a%20slot%20for%20my%20pet." target="_blank" rel="noopener">Or message on WhatsApp</a>
+          <p class="note" style="margin-top:16px">Your request goes straight to the clinic. We confirm on WhatsApp, usually the same day.</p>
         </form>
       </div>
 

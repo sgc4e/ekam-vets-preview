@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="en" href="../visit.html">
 <link rel="alternate" hreflang="hi" href="visit.html">
 <link rel="icon" type="image/png" href="../img/favicon.png">
-<link rel="stylesheet" href="../style.css?v=14">
+<link rel="stylesheet" href="../style.css?v=16">
 </head>
 <body>
 
@@ -49,7 +49,9 @@
       <div>
         <h2>स्लॉट बुक करें</h2>
         <hr class="rule">
-        <form class="book" onsubmit="event.preventDefault();document.getElementById('done').hidden=false;this.reset();">
+        <form class="book" method="post" action="/send.php">
+          <input type="hidden" name="lang" value="hi">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
           <label for="n">आपका नाम</label>
           <input id="n" name="n" required placeholder="नाम">
 
@@ -77,8 +79,9 @@
           <label for="m">बताइए क्या हो रहा है</label>
           <textarea id="m" name="m" placeholder="कब शुरू हुआ, क्या बदला, अब तक क्या दे चुके हैं"></textarea>
 
-          <button class="btn" type="submit">स्लॉट माँगें</button>
-          <p id="done" hidden class="note" style="margin-top:16px;color:#4F6F4A">अनुरोध दर्ज हो गया। क्लिनिक व्हाट्सऐप पर पुष्टि करेगा। यह डेमो फ़ॉर्म है और अभी कुछ भेजता नहीं।</p>
+          <button class="btn dark" type="submit">स्लॉट माँगें</button>
+          <a class="btn line" style="margin-left:10px" href="https://wa.me/919082053255?text=Hello%20ekam%20vets%2C%20I%20would%20like%20to%20book%20a%20slot%20for%20my%20pet." target="_blank" rel="noopener">या व्हाट्सऐप पर लिखिए</a>
+          <p class="note" style="margin-top:16px">आपका अनुरोध सीधे क्लिनिक पहुँचता है। हम व्हाट्सऐप पर पुष्टि करते हैं, आम तौर पर उसी दिन।</p>
         </form>
       </div>
 
