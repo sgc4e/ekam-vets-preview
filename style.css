@@ -118,7 +118,7 @@ footer.site .base{border-top:1px solid rgba(217,180,143,.25);margin-top:44px;pad
 
 
 /* ---- imagery ---- */
-.logomark{width:42px;height:42px;border-radius:10px;display:block}
+.logomark{width:48px;height:48px;display:block;flex:0 0 auto}
 .heromark{width:104px;height:104px;border-radius:22px;display:block;margin:0 auto 26px;box-shadow:0 8px 28px rgba(31,61,51,.18)}
 .media{display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(31,61,51,.14);background:#F7F2EA}
 .figure{margin:0 0 26px}

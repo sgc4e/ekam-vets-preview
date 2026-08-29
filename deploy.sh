@@ -15,7 +15,8 @@ echo "--- checking remote path ---"
 ssh -i $KEY -p $PORT $HOST "test -d $REMOTE && echo 'remote ok: $REMOTE' || { echo 'MISSING: add $DOMAIN in hPanel first'; exit 1; }"
 echo "--- uploading ---"
 chmod -R a+rX dist
-rsync -az --delete --chmod=D755,F644 -e "ssh -i $KEY -p $PORT" dist/ "$HOST:$REMOTE"
+# macOS ships openrsync, which has no --chmod; the chmod -R above already sets the modes
+rsync -az --delete -e "ssh -i $KEY -p $PORT" dist/ "$HOST:$REMOTE"
 echo "--- live ---"
 for p in "" hi/ blog.html rates.html sitemap.xml robots.txt; do
   printf "%-16s %s\n" "/$p" "$(curl -s -o /dev/null -w '%{http_code}' https://$DOMAIN/$p)"
