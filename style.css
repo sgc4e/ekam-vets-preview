@@ -351,3 +351,7 @@ html[lang="hi"] a.postcard .cat{letter-spacing:normal;text-transform:none;font-s
 .pagehead .narrow p{max-width:62ch}
 @media(max-width:960px){.postgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.postgrid{grid-template-columns:1fr}}
+
+/* v17: coming-soon badge on a service card */
+.soon{display:inline-block;vertical-align:middle;margin-left:8px;padding:3px 9px;border-radius:999px;background:var(--clay);color:var(--ink);font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+html[lang="hi"] .soon{letter-spacing:.04em;font-size:.7rem}

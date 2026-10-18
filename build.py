@@ -33,7 +33,7 @@ SCHEMA = """<script type="application/ld+json">
   "priceRange":"Rs 350 onwards",
   "currenciesAccepted":"INR",
   "paymentAccepted":"Cash, UPI, Card",
-  "address":{"@type":"PostalAddress","streetAddress":"Sector 1, Vidyadhar Nagar","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"},
+  "address":{"@type":"PostalAddress","streetAddress":"134, Sector 1, Vidyadhar Nagar","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"},
   "areaServed":[{"@type":"Place","name":"Vidyadhar Nagar"},{"@type":"Place","name":"Shastri Nagar"},{"@type":"Place","name":"Jhotwara"},{"@type":"Place","name":"Jaipur"}],
   "openingHoursSpecification":[
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"20:00"},
