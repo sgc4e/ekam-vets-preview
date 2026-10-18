@@ -88,16 +88,16 @@ import glob,re
 for f in glob.glob('hi/*.html'):
     s=open(f,encoding='utf-8').read()
     s=re.sub(r'\bRs (\d)', r'₹\1', s).replace('Rs 400','₹400').replace('Rs 900','₹900')
-    s=re.sub(r'href="\.\./style\.css[^"]*"','href="../style.css?v=17"',s)
+    s=re.sub(r'href="\.\./style\.css[^"]*"','href="../style.css?v=18"',s)
     open(f,'w',encoding='utf-8').write(s)
 for f in glob.glob('*.html'):
     s=open(f,encoding='utf-8').read()
-    open(f,'w',encoding='utf-8').write(re.sub(r'href="style\.css[^"]*"','href="style.css?v=17"',s))
+    open(f,'w',encoding='utf-8').write(re.sub(r'href="style\.css[^"]*"','href="style.css?v=18"',s))
 PY
 ```
 
 Bump the `v=` number whenever `style.css` changes. Chrome serves stale CSS otherwise;
-this cost real debugging time. Current version is **v17**, so the next edit uses v18.
+this cost real debugging time. Current version is **v18**, so the next edit uses v19.
 
 ---
 

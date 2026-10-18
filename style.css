@@ -355,3 +355,11 @@ html[lang="hi"] a.postcard .cat{letter-spacing:normal;text-transform:none;font-s
 /* v17: coming-soon badge on a service card */
 .soon{display:inline-block;vertical-align:middle;margin-left:8px;padding:3px 9px;border-radius:999px;background:var(--clay);color:var(--ink);font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 html[lang="hi"] .soon{letter-spacing:.04em;font-size:.7rem}
+
+/* v18: layout fixes, 19 Oct 2026.
+   .wrap{max-width:1180px} above overrode .narrow, so narrow sections ran full width. */
+.wrap.narrow{max-width:760px}
+/* centred bands: every paragraph sits in the middle, so the button lines up under the heading */
+.wrap[style*="text-align:center"] > p{margin-left:auto;margin-right:auto}
+/* breathing room between a photo and the text under it */
+.media + p, .media + h2, .media + h3{margin-top:26px}
