@@ -209,6 +209,15 @@ second opinion Rs 350 and surgery "On estimate" were kept. Rows are back in the 
 Parry confirmed: house number 134 is correct; the emergency number is the clinic number; every
 grooming service is on a vet's prescription, so the GST line on grooming stays.
 
+**18 Oct 2026, SG: the vet-cost blog post is hidden "for now", and every line comparing ekam to
+other clinics in Rajasthan or Jaipur is gone.** `build.py` has a `HIDDEN` set that keeps
+`blog-vet-cost-jaipur.html` (and its Hindi twin) out of dist/, the sitemap and the server; the
+source stays in the repo. Its card is off `blog.html`. To bring it back: empty `HIDDEN`, restore
+the card from git history (commit 40eaf1e), and fix its prices first. Removed lines: Services
+"Very few clinics in Rajasthan offer this", About "Not every clinic in this locality can say
+that", Integrated care "and where most clinics stop", dog-limping blog "almost no clinic in
+Rajasthan offers". Do not add claims like these back.
+
 - **Brand is lower case. Always.** `ekam vets`, never `Ekam Vets`, including at the start of a
   sentence and in `<title>`. Same for the Sanskrit word in running copy: "ekam means one".
 - **No doctor names anywhere.** One founder is a government employee whose name cannot be on

@@ -59,9 +59,10 @@ def title_of(s):
 def desc_of(s):
     m = re.search(r'name="description" content="([^"]*)"', s); return m.group(1) if m else ''
 
+HIDDEN = {'blog-vet-cost-jaipur.html'}  # hidden 18 Oct 2026 on SG's call; source kept
 pages = []
 for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
-    if os.path.basename(src).startswith('_'): continue
+    if os.path.basename(src).startswith('_') or os.path.basename(src) in HIDDEN: continue
     s = open(src, encoding='utf-8').read()
     hi = src.startswith('hi/')
     name = os.path.basename(src)
