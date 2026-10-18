@@ -97,7 +97,7 @@ PY
 ```
 
 Bump the `v=` number whenever `style.css` changes. Chrome serves stale CSS otherwise;
-this cost real debugging time. Current version is **v16**, so the next edit uses v17.
+this cost real debugging time. Current version is **v17**, so the next edit uses v18.
 
 ---
 
@@ -187,6 +187,15 @@ channel that needs no configuration.
 
 These come from `ashi-design-guide` and `ashi-decisions-open-loops`. Breaking them has
 legal or commercial consequences, not aesthetic ones.
+
+**18 Oct 2026, SG's decision: Parry's v1 copy went live verbatim, emoji included.** SG told
+Claude not to edit Parry's words. That overrides several rules below on the live site: the
+homeopathy prescriber is now "an experienced homeopath alongside the veterinary doctor", the
+"indicative" price line is gone, grooming is called part of the medical treatment for GST, the FAQ
+says "Yes" to 24 hours, the lab card says "no errors", and there is one emoji. Do not "fix" any of
+these without SG asking. The risks are written up in the Claude Doc "ekamvets.com: risks in the
+Parry v1 copy" (https://claude.ai/code/artifact/5db14f77-2e9c-41ae-b6cb-e1acf7582f7f).
+Source file: `~/Downloads/ekamvets-website-all-pages-all pgs except blogs_Parry v1 - clean.docx`.
 
 - **Brand is lower case. Always.** `ekam vets`, never `Ekam Vets`, including at the start of a
   sentence and in `<title>`. Same for the Sanskrit word in running copy: "ekam means one".
