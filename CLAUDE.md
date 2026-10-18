@@ -218,6 +218,14 @@ the card from git history (commit 40eaf1e), and fix its prices first. Removed li
 that", Integrated care "and where most clinics stop", dog-limping blog "almost no clinic in
 Rajasthan offers". Do not add claims like these back.
 
+**18 Oct 2026, SG: no prices anywhere on the site. Prices say "Coming soon".** Every rate card
+cell is "Coming soon" except the free 7-day follow-up ("Free") and surgery ("On estimate"). Home
+lede, Home "Prices in public" card, Services closing band, Integrated care "Not a longer bill",
+the FAQ consult question (now "What does a consult here include?"), the blog CTAs and the prices
+inside the dog-limping, homeopathy, tick fever and vaccination posts were all reworded without
+numbers. JSON-LD `priceRange` is gone from `build.py`. The consult fee in §10 is an internal fact,
+not site copy. Check with: `grep -rE 'Rs [0-9]|₹ ?[0-9]|रुपये' dist` after a build, expect nothing.
+
 - **Brand is lower case. Always.** `ekam vets`, never `Ekam Vets`, including at the start of a
   sentence and in `<title>`. Same for the Sanskrit word in running copy: "ekam means one".
 - **No doctor names anywhere.** One founder is a government employee whose name cannot be on
