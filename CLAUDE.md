@@ -197,6 +197,18 @@ these without SG asking. The risks are written up in the Claude Doc "ekamvets.co
 Parry v1 copy" (https://claude.ai/code/artifact/5db14f77-2e9c-41ae-b6cb-e1acf7582f7f).
 Source file: `~/Downloads/ekamvets-website-all-pages-all pgs except blogs_Parry v1 - clean.docx`.
 
+**18 Oct 2026, later: Parry's comments on the risk doc, applied.** Google Doc
+https://docs.google.com/document/d/1eaRJF1Ia0pafAE572yvHb-w8VOJpnz95jRbN4LMfMNQ (18 comments).
+Homeopathy is again "prescribed by our registered vet, with input from our homeopath" on Home,
+Integrated care and Services. The FAQ 24-hour answer is Parry's no-yes-no wording. "no errors",
+the two comparative lines, the emoji, ">>>", NEVER/BUT and the typos are gone. About's founders
+paragraph is Parry's reworded one, with no "business partners". "8 years and counting".
+Rate card: only consult Rs 350, grooming Rs 1,000 (bath and blow dry, large breed) and physio
+Rs 500 (single session) carry a price, every other row says "Coming soon"; the free follow-up,
+second opinion Rs 350 and surgery "On estimate" were kept. Rows are back in the two-line format.
+Parry confirmed: house number 134 is correct; the emergency number is the clinic number; every
+grooming service is on a vet's prescription, so the GST line on grooming stays.
+
 - **Brand is lower case. Always.** `ekam vets`, never `Ekam Vets`, including at the start of a
   sentence and in `<title>`. Same for the Sanskrit word in running copy: "ekam means one".
 - **No doctor names anywhere.** One founder is a government employee whose name cannot be on
