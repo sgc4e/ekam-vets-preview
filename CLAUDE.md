@@ -88,16 +88,16 @@ import glob,re
 for f in glob.glob('hi/*.html'):
     s=open(f,encoding='utf-8').read()
     s=re.sub(r'\bRs (\d)', r'₹\1', s).replace('Rs 400','₹400').replace('Rs 900','₹900')
-    s=re.sub(r'href="\.\./style\.css[^"]*"','href="../style.css?v=18"',s)
+    s=re.sub(r'href="\.\./style\.css[^"]*"','href="../style.css?v=19"',s)
     open(f,'w',encoding='utf-8').write(s)
 for f in glob.glob('*.html'):
     s=open(f,encoding='utf-8').read()
-    open(f,'w',encoding='utf-8').write(re.sub(r'href="style\.css[^"]*"','href="style.css?v=18"',s))
+    open(f,'w',encoding='utf-8').write(re.sub(r'href="style\.css[^"]*"','href="style.css?v=19"',s))
 PY
 ```
 
 Bump the `v=` number whenever `style.css` changes. Chrome serves stale CSS otherwise;
-this cost real debugging time. Current version is **v18**, so the next edit uses v19.
+this cost real debugging time. Current version is **v19**, so the next edit uses v20.
 
 ---
 
@@ -142,6 +142,13 @@ this cost real debugging time. Current version is **v18**, so the next edit uses
    them. The logo and favicon 403'd on the live site this way while every HTML page returned
    200. `deploy.sh` now passes `--chmod=D755,F644`. If an asset 404s or 403s, check
    permissions before you check paths.
+
+10. **Alignment rules (v18-v19, 19 Oct 2026).** `.wrap{max-width:1180px}` was overriding
+   `.narrow`, so narrow sections ran full width; v18 pins `.wrap.narrow` to 760px. Any
+   `<p style="text-align:center">` must also be auto-margined, or its 66ch max-width pins it left
+   and its button lands about 240px off centre (v19 does this in CSS). Every dark band is centred.
+   Audit before deploying: `python3 /home/claude/work/audit.py` style check, or measure each
+   centred button against its `.wrap` centre at 1280, 1560, 1920 and 390px.
 
 ---
 

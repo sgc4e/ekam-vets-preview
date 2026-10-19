@@ -363,3 +363,10 @@ html[lang="hi"] .soon{letter-spacing:.04em;font-size:.7rem}
 .wrap[style*="text-align:center"] > p{margin-left:auto;margin-right:auto}
 /* breathing room between a photo and the text under it */
 .media + p, .media + h2, .media + h3{margin-top:26px}
+
+/* v19: alignment, 19 Oct 2026.
+   A centred paragraph holding a button was itself pinned left by its 66ch max-width. */
+p[style*="text-align:center"]{margin-left:auto;margin-right:auto}
+/* every dark band reads centred, the way Home, Services and Visit already do */
+section.dark .wrap.narrow{text-align:center}
+section.dark .wrap.narrow > p, section.dark .wrap.narrow > hr{margin-left:auto;margin-right:auto}
