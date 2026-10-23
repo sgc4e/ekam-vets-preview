@@ -16,7 +16,7 @@ if (!empty($_POST['website'])) { header('Location: ' . $thanks); exit; }  // hon
 
 function f($k) { return isset($_POST[$k]) ? trim(strip_tags((string)$_POST[$k])) : ''; }
 $name = f('n'); $phone = f('p'); $animal = f('a');
-$need = f('s'); $when = f('d'); $msg = f('m');
+$need = f('s'); $when = f('d'); $msg = f('m'); $heard = f('h');
 if ($name === '' || $phone === '') { header('Location: ' . $fail); exit; }
 
 $subject = 'Booking request: ' . $name . ' (' . ($need ?: 'no service chosen') . ')';
@@ -26,7 +26,8 @@ $body .= "Name            : $name\n";
 $body .= "Phone / WhatsApp: $phone\n";
 $body .= "Animal          : $animal\n";
 $body .= "Needs           : $need\n";
-$body .= "Preferred time  : $when\n\n";
+$body .= "Preferred time  : $when\n";
+$body .= "Heard about us  : $heard\n\n";
 $body .= "What is going on:\n" . ($msg ?: '(nothing written)') . "\n\n";
 $body .= "--------------------------------------\n";
 $body .= 'Language : ' . ($lang === 'hi' ? 'Hindi' : 'English') . "\n";

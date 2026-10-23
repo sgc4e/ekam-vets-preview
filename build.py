@@ -4,7 +4,7 @@
   python3 build.py ekamvets.in            # indexable (default)
   python3 build.py ekamvets.in --noindex  # keep search engines out
 """
-import sys, os, re, glob, shutil, datetime
+import sys, os, re, glob, shutil, datetime, subprocess
 
 if len(sys.argv) < 2:
     sys.exit('usage: python3 build.py <domain> [--noindex]')
@@ -19,6 +19,21 @@ os.makedirs('dist/img', exist_ok=True)
 for f in glob.glob('img/*'): shutil.copy2(f, 'dist/img/')
 shutil.copy2('style.css', 'dist/style.css')
 if os.path.exists('send.php'): shutil.copy2('send.php', 'dist/send.php')
+# IndexNow key file: <32 hex>.txt at the site root. indexnow.py reads the same file.
+for f in glob.glob('*.txt'):
+    if re.fullmatch(r'[0-9a-f]{32}\.txt', f): shutil.copy2(f, 'dist/' + f)
+
+def lastmod(src):
+    """Date of the last commit that changed this page's content. Commits that only
+    bumped the style.css?v= cache-buster are skipped. Uncommitted edits count as today."""
+    if subprocess.run(['git', 'status', '--porcelain', '--', src], capture_output=True, text=True).stdout.strip():
+        return TODAY
+    log = subprocess.run(['git', 'log', '--format=@%cs', r'-Istyle\.css\?v=', '--numstat', '--', src],
+                         capture_output=True, text=True).stdout
+    for block in log.split('@')[1:]:
+        date, _, stat = block.partition('\n')
+        if stat.strip(): return date.strip()
+    return TODAY
 
 SCHEMA = """<script type="application/ld+json">
 {
@@ -98,11 +113,12 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     # relative asset paths stay correct; write out
     out = 'dist/hi/' + name if hi else 'dist/' + name
     open(out, 'w', encoding='utf-8').write(s)
-    pages.append((url, name, hi))
+    pages.append((url, name, hi, lastmod(src)))
 
 # sitemap with hreflang pairs
 rows = []
-for url, name, hi in pages:
+mods = {(n, h): m for _, n, h, m in pages}
+for url, name, hi, _ in pages:
     if hi or name == 'thanks.html': continue
     en = '%s/%s' % (BASE, '' if name == 'index.html' else name)
     hin = '%s/hi/%s' % (BASE, '' if name == 'index.html' else name)
@@ -119,7 +135,7 @@ for url, name, hi in pages:
     <xhtml:link rel="alternate" hreflang="en-IN" href="%s"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="%s"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>
-  </url>""" % (en, TODAY, en, hin, en, hin, TODAY, en, hin, en))
+  </url>""" % (en, mods[(name, False)], en, hin, en, hin, mods.get((name, True), mods[(name, False)]), en, hin, en))
 open('dist/sitemap.xml','w',encoding='utf-8').write(
  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
  + '\n'.join(rows) + '\n</urlset>\n')
@@ -168,6 +184,8 @@ ExpiresByType text/html "access plus 1 hour"
 <IfModule mod_headers.c>
 Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
+# Browsers ignore HSTS on plain http, so no HTTPS condition is needed.
+Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 """)
 

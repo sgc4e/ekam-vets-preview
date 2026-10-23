@@ -13,6 +13,9 @@ REMOTE="domains/$DOMAIN/public_html/"
 python3 build.py "$DOMAIN" "$@"
 echo "--- checking remote path ---"
 ssh -i $KEY -p $PORT $HOST "test -d $REMOTE && echo 'remote ok: $REMOTE' || { echo 'MISSING: add $DOMAIN in hPanel first'; exit 1; }"
+# Live sitemap before upload, so indexnow.py can ping only what changed
+OLD_SITEMAP=$(mktemp)
+curl -s -A 'Mozilla/5.0' "https://$DOMAIN/sitemap.xml" -o "$OLD_SITEMAP" || true
 echo "--- uploading ---"
 chmod -R a+rX dist
 # macOS ships openrsync, which has no --chmod; the chmod -R above already sets the modes
@@ -21,3 +24,8 @@ echo "--- live ---"
 for p in "" hi/ blog.html rates.html sitemap.xml robots.txt; do
   printf "%-16s %s\n" "/$p" "$(curl -s -o /dev/null -w '%{http_code}' https://$DOMAIN/$p)"
 done
+if [[ "$*" != *--noindex* ]]; then
+  echo "--- indexnow ---"
+  python3 indexnow.py "$DOMAIN" "$OLD_SITEMAP" || echo "IndexNow ping failed (deploy is still live)"
+fi
+rm -f "$OLD_SITEMAP"

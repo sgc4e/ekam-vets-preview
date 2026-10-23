@@ -1,5 +1,8 @@
-# ekam vets — website preview
+# ekam vets — website
 
-Working draft of the website for an integrated veterinary clinic in Vidyadhar Nagar, Jaipur.
+Bilingual (English and Hindi) static site for ekam vets, an integrated veterinary clinic in Vidyadhar Nagar, Jaipur.
 
-**This is a preview, not the live site.** Phone numbers, email, address, the booking form and most rate-card prices are placeholders. Photography is Unsplash stock, not the clinic's. The site carries a noindex tag and robots.txt disallow so search engines stay out until the real content lands.
+**Live and indexable at https://ekamvets.com** since 29 Aug 2026, on Hostinger. Deploy with `./deploy.sh ekamvets.com` (build, rsync, IndexNow ping for changed URLs). The GitHub Pages copy at sgc4e.github.io/ekam-vets-preview stays `noindex`. Read `CLAUDE.md` before editing: `hi/` is generated.
+
+Still to replace: photography is Unsplash stock, and the rate card says "coming soon". A WordPress migration is in progress in `wp/` (uncommitted).
+
