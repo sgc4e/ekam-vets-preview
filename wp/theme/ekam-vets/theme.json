@@ -1,0 +1,138 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": false,
+		"useRootPaddingAwareAlignments": false,
+		"spacing": {
+			"blockGap": null
+		},
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"palette": [
+				{
+					"slug": "neem",
+					"name": "Neem",
+					"color": "#1F3D33"
+				},
+				{
+					"slug": "terracotta",
+					"name": "Terracotta",
+					"color": "#B85C38"
+				},
+				{
+					"slug": "sand",
+					"name": "Sand",
+					"color": "#EFE6D9"
+				},
+				{
+					"slug": "ink",
+					"name": "Ink",
+					"color": "#2A2724"
+				},
+				{
+					"slug": "clay",
+					"name": "Clay",
+					"color": "#D9B48F"
+				},
+				{
+					"slug": "confirm",
+					"name": "Confirm",
+					"color": "#4F6F4A"
+				},
+				{
+					"slug": "alert",
+					"name": "Alert",
+					"color": "#8C2F1E"
+				},
+				{
+					"slug": "paper",
+					"name": "Paper",
+					"color": "#F7F2EA"
+				},
+				{
+					"slug": "mint",
+					"name": "Mint",
+					"color": "#E6EDE6"
+				},
+				{
+					"slug": "shell",
+					"name": "Shell",
+					"color": "#F3EDE4"
+				}
+			]
+		},
+		"typography": {
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"slug": "serif",
+					"name": "Frank Ruhl Libre",
+					"fontFamily": "\"Frank Ruhl Libre\", Georgia, serif"
+				},
+				{
+					"slug": "sans",
+					"name": "Mukta",
+					"fontFamily": "\"Mukta\", \"Inter\", system-ui, -apple-system, sans-serif"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"link": {
+				"typography": {
+					"textDecoration": "none"
+				}
+			},
+			"button": {
+				"border": {
+					"width": "0",
+					"radius": "999px"
+				},
+				"color": {
+					"background": "#B85C38",
+					"text": "#ffffff"
+				},
+				"spacing": {
+					"padding": {
+						"top": "13px",
+						"right": "30px",
+						"bottom": "13px",
+						"left": "30px"
+					}
+				},
+				"typography": {
+					"fontFamily": "inherit",
+					"fontSize": ".97rem",
+					"lineHeight": "inherit",
+					"textDecoration": "none"
+				},
+				":hover": {
+					"color": {
+						"background": "#a04f2f"
+					}
+				}
+			}
+		}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		},
+		{
+			"name": "tabbar",
+			"title": "Mobile tab bar",
+			"area": "uncategorized"
+		}
+	]
+}

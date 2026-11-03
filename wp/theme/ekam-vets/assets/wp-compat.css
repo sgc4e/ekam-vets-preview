@@ -1,0 +1,117 @@
+/* ekam vets: selector adaptations for block markup.
+   The design is assets/site.css, a verbatim copy of the static style.css.
+   Nothing here restyles the site; each rule re-targets a static selector
+   at the element the core block actually outputs. */
+
+/* ---- utilities: the static pages' inline style="" attributes.
+   !important keeps the precedence an inline style had. ---- */
+.u-mt-16{margin-top:16px!important}
+.u-mt-26{margin-top:26px!important}
+.u-mt-30{margin-top:30px!important}
+.u-mt-34{margin-top:34px!important}
+.u-mt-40{margin-top:40px!important}
+.u-mb-24{margin-bottom:24px!important}
+.u-mb-26{margin-bottom:26px!important}
+.u-m-0{margin:0!important}
+.u-mx-auto{margin-left:auto!important;margin-right:auto!important}
+.u-center{text-align:center!important}
+.u-pt-34{padding-top:34px!important}
+.u-items-start{align-items:start!important}
+.u-clay{color:#D9B48F!important}
+.u-sand-80{color:rgba(239,230,217,.8)!important}
+.u-sand-82{color:rgba(239,230,217,.82)!important}
+.u-mw-30ch{max-width:30ch!important}
+.u-serif{font-family:var(--serif)!important}
+.u-fs-150{font-size:1.5rem!important}
+.u-neem{color:var(--neem)!important}
+
+/* ---- header: brand = site logo + site title + tagline ---- */
+.brand p{margin:0}
+.brand .wp-block-site-title{font:inherit;letter-spacing:normal} /* the static .name was an inline span; the title link carries it now */
+.brand .wp-block-site-title a{font-family:var(--serif);font-size:1.28rem;letter-spacing:.02em;line-height:1}
+.brand a{color:inherit}
+.brand a:hover{text-decoration:none}
+.brand .wp-block-site-logo img{display:block;width:48px;height:48px}
+
+/* header: nav.main a  ->  core/navigation items */
+header.site .wp-block-navigation.main .wp-block-navigation__container{gap:26px}
+header.site .wp-block-navigation.main .wp-block-navigation-item__content{color:var(--sand);font-size:.92rem;opacity:.8;padding:0}
+header.site .wp-block-navigation.main .wp-block-navigation-item__content:hover,
+header.site .wp-block-navigation.main .current-menu-item>.wp-block-navigation-item__content{opacity:1;text-decoration:none;border-bottom:2px solid var(--clay)}
+header.site .wp-block-navigation.main .lang>.wp-block-navigation-item__content{border:1px solid rgba(217,180,143,.5);border-radius:999px;padding:6px 14px;letter-spacing:.02em}
+header.site .wp-block-navigation.main .lang>.wp-block-navigation-item__content:hover{background:var(--clay);color:var(--neem);border-color:var(--clay)}
+header.site .wp-block-navigation.main .cta>.wp-block-navigation-item__content{background:var(--terracotta);color:#fff;padding:10px 20px;border-radius:999px;opacity:1;border:0;font-size:.9rem}
+header.site .wp-block-navigation.main .cta>.wp-block-navigation-item__content:hover{background:#a04f2f;border:0}
+@media(max-width:900px){
+  header.site .wp-block-navigation.main .wp-block-navigation-item:not(.cta){display:none}
+  header.site .wp-block-navigation.main .cta>.wp-block-navigation-item__content{display:block} /* site.css hides nav.main a:not(.cta); .cta sits on the li here */
+}
+
+/* ---- buttons: a.btn / .btn.dark / .btn.line / .btn.ghost  ->  core/button + block style ---- */
+.wp-block-buttons{gap:0 .65em;margin:0 0 1.1em;max-width:66ch} /* was a <p>: same margin and max-width */
+.wp-block-buttons.btnrow{gap:14px;margin:0;max-width:none;align-items:stretch}
+.wp-block-button .wp-block-button__link{display:inline-block;align-content:normal;background:var(--terracotta);padding:13px 30px;border:0;border-radius:999px;font-size:.97rem;letter-spacing:.01em;text-decoration:none}
+:where(.wp-block-button) .wp-block-button__link{color:#fff} /* low specificity: .dark a wins, as it does on the static site */
+.wp-block-button .wp-block-button__link:hover{background:#a04f2f;text-decoration:none}
+.wp-block-button.is-style-dark .wp-block-button__link{background:var(--neem);color:var(--sand)}
+.wp-block-button.is-style-dark .wp-block-button__link:hover{background:#163027}
+.wp-block-button.is-style-line .wp-block-button__link{background:transparent;color:var(--neem);border:1.5px solid rgba(31,61,51,.35)}
+.wp-block-button.is-style-line .wp-block-button__link:hover{background:var(--neem);color:var(--sand)}
+.wp-block-button.is-style-ghost .wp-block-button__link{background:transparent;color:var(--neem);border:1.5px solid var(--neem)}
+.wp-block-button.is-style-ghost .wp-block-button__link:hover{background:var(--neem);color:var(--sand)}
+.dark .wp-block-button.is-style-ghost .wp-block-button__link{color:var(--sand);border-color:var(--clay)}
+.dark .wp-block-button.is-style-ghost .wp-block-button__link:hover{background:var(--clay);color:var(--neem)}
+
+/* ---- images: img.x  ->  figure.wp-block-image.x > img ---- */
+figure.wp-block-image{margin:0}
+figure.wp-block-image.media{border:0;border-radius:0;background:none;aspect-ratio:auto}
+figure.media img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(31,61,51,.14);background:#F7F2EA;object-fit:cover;aspect-ratio:10/7}
+.card figure.media img{border-radius:10px;border-color:rgba(31,61,51,.12);aspect-ratio:16/10}
+.dark .card figure.media img{border-color:rgba(217,180,143,.25)}
+.pagehead figure.media img{border-color:rgba(217,180,143,.3);aspect-ratio:21/8}
+figure.wm img{display:block;width:100%;height:auto;border-radius:40px}
+figure.band img{display:block;width:100%;height:auto}
+.step .wp-block-image img{width:100%;height:170px;object-fit:cover;display:block}
+
+/* ---- hr.rule  ->  core/separator ---- */
+hr.wp-block-separator.rule{width:56px;height:3px;background:var(--terracotta);border:0;margin:0 0 26px;opacity:1}
+
+/* ---- table.rates  ->  figure.wp-block-table.rates > table (caption becomes figcaption, moved on top) ---- */
+figure.wp-block-table.rates{display:flex;flex-direction:column;margin:0 0 40px;overflow-x:visible}
+.wp-block-table.rates table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.wp-block-table.rates figcaption{order:-1;margin:0;text-align:left;font-family:var(--serif);font-size:1.22rem;color:var(--neem);padding:0 0 12px}
+.wp-block-table.rates thead{border:0}
+.wp-block-table.rates th,.wp-block-table.rates td{text-align:left;padding:14px 10px;border:0;border-bottom:1px solid rgba(31,61,51,.16);vertical-align:top}
+.wp-block-table.rates th{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--neem);font-weight:600}
+.wp-block-table.rates .has-text-align-right{text-align:right}
+.wp-block-table.rates td:last-child{text-align:right;white-space:nowrap;font-weight:600;color:var(--neem)}
+.wp-block-table.rates td small{display:block;color:#6b645c;font-size:.85rem;font-weight:400}
+
+/* ---- dl.faq dt/dd  ->  core/details summary + paragraph (open by default) ---- */
+.faq .wp-block-details{margin:0}
+.faq summary{font-family:var(--serif);font-size:1.12rem;color:var(--neem);margin:30px 0 8px;list-style:none;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq .wp-block-details p{margin:0;max-width:66ch}
+
+/* ---- inline content that sat directly in a div now sits in a paragraph ---- */
+p.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--terracotta);display:block}
+.statband p,.timeline p{margin:0;max-width:none}
+
+/* ---- footer ---- */
+footer.site p.links{margin:0}
+footer.site .base p{margin:0}
+
+/* ---- blog index: a.postcard  ->  Query Loop post ---- */
+.postgrid{list-style:none;padding:0;margin:0}
+.postgrid>.wp-block-post{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;color:var(--ink);transition:box-shadow .18s ease,transform .18s ease}
+.postgrid>.wp-block-post:hover{box-shadow:0 12px 34px rgba(31,61,51,.10);transform:translateY(-2px)}
+.postgrid .wp-block-post-featured-image{margin:0}
+.postgrid .wp-block-post-featured-image img{width:100%;height:190px;object-fit:cover;display:block}
+.postgrid .pc{padding:26px 26px 30px}
+.postgrid .cat{display:inline-block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);margin-bottom:12px;font-weight:600}
+.postgrid .cat a{color:inherit}
+.postgrid .wp-block-post-title{font-size:1.14rem;margin-bottom:.45em;line-height:1.28}
+.postgrid .wp-block-post-title a{color:inherit}
+.postgrid .wp-block-post-title a:hover{text-decoration:none}
+.postgrid .wp-block-post-title a::after{content:"";position:absolute;inset:0} /* whole card is the link, as before */
+.postgrid .wp-block-post-excerpt,.postgrid .wp-block-post-excerpt p{font-size:.94rem;color:#5b544c;margin:0}

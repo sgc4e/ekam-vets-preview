@@ -1,0 +1,376 @@
+{
+ "en": [
+  {
+   "slug": "about",
+   "type": "page",
+   "title": "About",
+   "document_title": "About · ekam vets, Jaipur",
+   "description": "Why ekam vets exists, who runs it, and what the clinic refuses to do. An integrated veterinary practice in Vidyadhar Nagar, Jaipur.",
+   "template": "page"
+  },
+  {
+   "slug": "blog-dog-limping",
+   "type": "post",
+   "title": "Your dog is limping. A painkiller alone is the wrong answer.",
+   "document_title": "Your dog is limping. A painkiller alone is the wrong answer. · ekam vets, Jaipur",
+   "description": "Why limping dogs in Jaipur keep relapsing, what a proper work-up looks like, and how physiotherapy changes the outcome after a fracture or cruciate surgery.",
+   "template": "single",
+   "order": 4,
+   "category": "Physiotherapy",
+   "excerpt": "Why limping dogs in Jaipur keep relapsing, what a proper work-up looks like, and how physiotherapy changes the outcome after a fracture or cruciate surgery.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1551887373-3c5bd224f6e2?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "A retriever resting on the floor"
+   }
+  },
+  {
+   "slug": "blog-heat-stroke",
+   "type": "post",
+   "title": "Heat stroke in dogs: the ten minutes that decide it",
+   "document_title": "Heat stroke in dogs: the ten minutes that decide it · ekam vets, Jaipur",
+   "description": "Jaipur summers kill dogs every year. How to spot heat stroke, what to do in the first ten minutes, and the cooling mistake that makes it worse.",
+   "template": "single",
+   "order": 2,
+   "category": "Emergency",
+   "excerpt": "Jaipur summers kill dogs every year. How to spot heat stroke, what to do in the first ten minutes, and the cooling mistake that makes it worse.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1657110605851-ebd3a5fcf650?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "An Indian street dog on a road"
+   }
+  },
+  {
+   "slug": "blog-homeopathy-for-pets",
+   "type": "post",
+   "title": "Homeopathy for pets: what it can do, and what it cannot",
+   "document_title": "Homeopathy for pets: what it can do, and what it cannot · ekam vets, Jaipur",
+   "description": "An honest look at homeopathy and herbal medicine for dogs and cats in India: where they help, where they are dangerous, and the questions to ask.",
+   "template": "single",
+   "order": 6,
+   "category": "Integrated care",
+   "excerpt": "An honest look at homeopathy and herbal medicine for dogs and cats in India: where they help, where they are dangerous, and the questions to ask.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "A person holding a tabby cat"
+   }
+  },
+  {
+   "slug": "blog-street-dog-first-aid",
+   "type": "post",
+   "title": "You found an injured street dog in Jaipur. What to do first.",
+   "document_title": "You found an injured street dog in Jaipur. What to do first. · ekam vets, Jaipur",
+   "description": "Practical first aid for an injured street dog or cat in Jaipur: how to move it safely, what never to give, and where to get free treatment.",
+   "template": "single",
+   "order": 5,
+   "category": "Community",
+   "excerpt": "Practical first aid for an injured street dog or cat in Jaipur: how to move it safely, what never to give, and where to get free treatment.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1685986350394-d36d44c77979?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "A street dog resting under a bench"
+   }
+  },
+  {
+   "slug": "blog-tick-fever",
+   "type": "post",
+   "title": "Tick fever in Jaipur dogs: the signs most owners miss",
+   "document_title": "Tick fever in Jaipur dogs: the signs most owners miss · ekam vets, Jaipur",
+   "description": "Tick fever is the most under-diagnosed illness in Jaipur dogs. The early signs, why a normal-looking dog can still be positive, and when to test.",
+   "template": "single",
+   "order": 1,
+   "category": "Health",
+   "excerpt": "Tick fever is the most under-diagnosed illness in Jaipur dogs. The early signs, why a normal-looking dog can still be positive, and when to test.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1770836037793-95bdbf190f71?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "A veterinarian examining a dog"
+   }
+  },
+  {
+   "slug": "blog-vaccination-schedule",
+   "type": "post",
+   "title": "Puppy vaccination schedule in India, without the confusion",
+   "document_title": "Puppy vaccination schedule in India, without the confusion · ekam vets, Jaipur",
+   "description": "A clear month by month vaccination and deworming schedule for puppies and adult dogs in India, with what each vaccine covers and what it costs.",
+   "template": "single",
+   "order": 3,
+   "category": "Preventive",
+   "excerpt": "A clear month by month vaccination and deworming schedule for puppies and adult dogs in India, with what each vaccine covers and what it costs.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1588950538967-ca7f8599c669?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "An owner holding her dog"
+   }
+  },
+  {
+   "slug": "blog-vet-cost-jaipur",
+   "type": "post",
+   "title": "What a vet visit costs in Jaipur, line by line",
+   "document_title": "What a vet visit costs in Jaipur, line by line · ekam vets, Jaipur",
+   "description": "What you actually pay at a vet in Jaipur: consultation fees, vaccination, blood tests, X-ray and surgery, with real numbers and what drives the bill up.",
+   "template": "single",
+   "order": 0,
+   "category": "Money",
+   "excerpt": "What you actually pay at a vet in Jaipur: consultation fees, vaccination, blood tests, X-ray and surgery, with real numbers and what drives the bill up.",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1654895716780-b4664497420d?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "A person holding a dog"
+   }
+  },
+  {
+   "slug": "blog",
+   "type": "page",
+   "title": "Blog",
+   "document_title": "Blog · ekam vets, Jaipur",
+   "description": "Practical articles for pet owners in Jaipur: vaccination schedules, tick fever, heat stroke, vet costs, physiotherapy and street animal first aid.",
+   "template": "home"
+  },
+  {
+   "slug": "community",
+   "type": "page",
+   "title": "Community and street animals",
+   "document_title": "Community and street animals · ekam vets, Jaipur",
+   "description": "Street animals are treated free at ekam vets. Feeders and rescuers in Vidyadhar Nagar, Shastri Nagar and Jhotwara get a reduced rate.",
+   "template": "page"
+  },
+  {
+   "slug": "faq",
+   "type": "page",
+   "title": "FAQ",
+   "document_title": "FAQ · ekam vets, Jaipur",
+   "description": "Questions pet parents ask before their first visit to ekam vets: hours, emergencies, prices, what to bring, and what integrated care means.",
+   "template": "page"
+  },
+  {
+   "slug": "index",
+   "type": "page",
+   "title": "Home",
+   "document_title": "ekam vets · Integrated holistic vets, Vidyadhar Nagar, Jaipur",
+   "description": "Mindful, natural and integrative veterinary care in Vidyadhar Nagar, Jaipur. Medicine, physiotherapy, in-house lab, IPD and an operation theatre under one roof. Consult Rs 350.",
+   "template": "front-page"
+  },
+  {
+   "slug": "integrated-care",
+   "type": "page",
+   "title": "Integrated care",
+   "document_title": "Integrated care · ekam vets, Jaipur",
+   "description": "What an integrated holistic consult looks like at ekam vets: six steps, four kinds of care, one file. Vidyadhar Nagar, Jaipur.",
+   "template": "page"
+  },
+  {
+   "slug": "rates",
+   "type": "page",
+   "title": "Rate card",
+   "document_title": "Rate card · ekam vets, Jaipur",
+   "description": "Published prices for consultation, vaccination, lab tests, imaging, physiotherapy and grooming at ekam vets, Vidyadhar Nagar, Jaipur.",
+   "template": "page"
+  },
+  {
+   "slug": "services",
+   "type": "page",
+   "title": "Services",
+   "document_title": "Services · ekam vets, Vidyadhar Nagar, Jaipur",
+   "description": "Clinic and medicine, surgery, physiotherapy, in-house lab and imaging, grooming. Everything ekam vets does, with what it costs.",
+   "template": "page"
+  },
+  {
+   "slug": "thanks",
+   "type": "page",
+   "title": "Request received",
+   "document_title": "Request received · ekam vets, Jaipur",
+   "description": "Your booking request has reached ekam vets, Vidyadhar Nagar, Jaipur. We confirm on WhatsApp, usually the same day.",
+   "template": "page"
+  },
+  {
+   "slug": "visit",
+   "type": "page",
+   "title": "Visit and book",
+   "document_title": "Visit and book · ekam vets, Vidyadhar Nagar, Jaipur",
+   "description": "Clinic hours, address, phone and WhatsApp for ekam vets, Vidyadhar Nagar, Jaipur. Book a consult, a physiotherapy assessment or a grooming slot.",
+   "template": "page"
+  }
+ ],
+ "hi": [
+  {
+   "slug": "about",
+   "type": "page",
+   "title": "हमारे बारे में",
+   "document_title": "हमारे बारे में · ekam vets, जयपुर",
+   "description": "ekam vets क्यों है, कौन चलाता है, और यह क्लिनिक क्या करने से मना करता है। विद्याधर नगर, जयपुर की एक इंटीग्रेटेड पशु चिकित्सा प्रैक्टिस।",
+   "template": "page"
+  },
+  {
+   "slug": "blog-dog-limping",
+   "type": "post",
+   "title": "आपका कुत्ता लँगड़ा रहा है। अकेली दर्द की दवा ग़लत जवाब है।",
+   "document_title": "आपका कुत्ता लँगड़ा रहा है। अकेली दर्द की दवा ग़लत जवाब है। · ekam vets, जयपुर",
+   "description": "जयपुर में लँगड़ाते कुत्तों की तकलीफ़ बार-बार क्यों लौटती है, सही जाँच कैसी होती है, और फ़्रैक्चर या घुटने की सर्जरी के बाद फ़िज़ियोथेरेपी नतीजा कैसे बदल देती है।",
+   "template": "single",
+   "order": 4,
+   "category": "फ़िज़ियोथेरेपी",
+   "excerpt": "जयपुर में लँगड़ाते कुत्तों की तकलीफ़ बार-बार क्यों लौटती है, सही जाँच कैसी होती है, और फ़्रैक्चर या घुटने की सर्जरी के बाद फ़िज़ियोथेरेपी नतीजा कैसे बदल देती है।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1551887373-3c5bd224f6e2?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "ज़मीन पर आराम करता एक रिट्रीवर"
+   }
+  },
+  {
+   "slug": "blog-heat-stroke",
+   "type": "post",
+   "title": "कुत्तों में लू: वे दस मिनट जो सब तय करते हैं",
+   "document_title": "कुत्तों में लू: वे दस मिनट जो सब तय करते हैं · ekam vets, जयपुर",
+   "description": "जयपुर की गर्मी हर साल कुत्तों की जान लेती है। लू कैसे पहचानें, पहले दस मिनट में क्या करें, और ठंडा करने की वह ग़लती जो हालत बिगाड़ देती है।",
+   "template": "single",
+   "order": 2,
+   "category": "इमरजेंसी",
+   "excerpt": "जयपुर की गर्मी हर साल कुत्तों की जान लेती है। लू कैसे पहचानें, पहले दस मिनट में क्या करें, और ठंडा करने की वह ग़लती जो हालत बिगाड़ देती है।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1657110605851-ebd3a5fcf650?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "सड़क पर एक देसी कुत्ता"
+   }
+  },
+  {
+   "slug": "blog-homeopathy-for-pets",
+   "type": "post",
+   "title": "पालतू जानवरों के लिए होम्योपैथी: क्या कर सकती है, और क्या नहीं",
+   "document_title": "पालतू जानवरों के लिए होम्योपैथी: क्या कर सकती है, और क्या नहीं · ekam vets, जयपुर",
+   "description": "भारत में कुत्तों और बिल्लियों के लिए होम्योपैथी और जड़ी-बूटी पर एक ईमानदार नज़र: कहाँ मदद करती हैं, कहाँ ख़तरनाक हैं, और क्या सवाल पूछने चाहिए।",
+   "template": "single",
+   "order": 6,
+   "category": "इंटीग्रेटेड केयर",
+   "excerpt": "भारत में कुत्तों और बिल्लियों के लिए होम्योपैथी और जड़ी-बूटी पर एक ईमानदार नज़र: कहाँ मदद करती हैं, कहाँ ख़तरनाक हैं, और क्या सवाल पूछने चाहिए।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "चितकबरी बिल्ली को गोद में लिए एक व्यक्ति"
+   }
+  },
+  {
+   "slug": "blog-street-dog-first-aid",
+   "type": "post",
+   "title": "जयपुर में आपको घायल सड़क का कुत्ता मिला। पहले क्या करें।",
+   "document_title": "जयपुर में आपको घायल सड़क का कुत्ता मिला। पहले क्या करें। · ekam vets, जयपुर",
+   "description": "जयपुर में घायल सड़क के कुत्ते या बिल्ली के लिए काम का प्राथमिक इलाज: सुरक्षित तरीक़े से कैसे उठाएँ, क्या कभी न दें, और मुफ़्त इलाज कहाँ मिलेगा।",
+   "template": "single",
+   "order": 5,
+   "category": "कम्युनिटी",
+   "excerpt": "जयपुर में घायल सड़क के कुत्ते या बिल्ली के लिए काम का प्राथमिक इलाज: सुरक्षित तरीक़े से कैसे उठाएँ, क्या कभी न दें, और मुफ़्त इलाज कहाँ मिलेगा।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1685986350394-d36d44c77979?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "बेंच के नीचे आराम करता सड़क का कुत्ता"
+   }
+  },
+  {
+   "slug": "blog-tick-fever",
+   "type": "post",
+   "title": "जयपुर के कुत्तों में टिक फ़ीवर: वे लक्षण जो ज़्यादातर मालिक चूक जाते हैं",
+   "document_title": "जयपुर के कुत्तों में टिक फ़ीवर: वे लक्षण जो ज़्यादातर मालिक चूक जाते हैं · ekam vets, जयपुर",
+   "description": "जयपुर के कुत्तों में टिक फ़ीवर सबसे कम पकड़ी जाने वाली बीमारी है। शुरुआती लक्षण, ठीक दिखता कुत्ता भी पॉज़िटिव क्यों हो सकता है, और जाँच कब करानी है।",
+   "template": "single",
+   "order": 1,
+   "category": "सेहत",
+   "excerpt": "जयपुर के कुत्तों में टिक फ़ीवर सबसे कम पकड़ी जाने वाली बीमारी है। शुरुआती लक्षण, ठीक दिखता कुत्ता भी पॉज़िटिव क्यों हो सकता है, और जाँच कब करानी है।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1770836037793-95bdbf190f71?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "एक पशु डॉक्टर कुत्ते की जाँच करते हुए"
+   }
+  },
+  {
+   "slug": "blog-vaccination-schedule",
+   "type": "post",
+   "title": "भारत में पिल्ले के टीकों का शेड्यूल, बिना उलझन के",
+   "document_title": "भारत में पिल्ले के टीकों का शेड्यूल, बिना उलझन के · ekam vets, जयपुर",
+   "description": "भारत में पिल्लों और बड़े कुत्तों के लिए महीने-दर-महीने साफ़ टीका और कीड़े की दवा का शेड्यूल, हर टीका किस चीज़ से बचाता है और क्या ख़र्च है, इसके साथ।",
+   "template": "single",
+   "order": 3,
+   "category": "बचाव",
+   "excerpt": "भारत में पिल्लों और बड़े कुत्तों के लिए महीने-दर-महीने साफ़ टीका और कीड़े की दवा का शेड्यूल, हर टीका किस चीज़ से बचाता है और क्या ख़र्च है, इसके साथ।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1588950538967-ca7f8599c669?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "अपने कुत्ते को गोद में लिए एक मालकिन"
+   }
+  },
+  {
+   "slug": "blog-vet-cost-jaipur",
+   "type": "post",
+   "title": "जयपुर में डॉक्टर की एक विज़िट का असली ख़र्च, एक-एक लाइन",
+   "document_title": "जयपुर में डॉक्टर की एक विज़िट का असली ख़र्च, एक-एक लाइन · ekam vets, जयपुर",
+   "description": "जयपुर में पशु डॉक्टर के यहाँ आप असल में क्या देते हैं: कंसल्ट फ़ीस, टीके, ख़ून की जाँच, एक्स-रे और सर्जरी, असली आँकड़ों के साथ, और बिल किस चीज़ से बढ़ता है।",
+   "template": "single",
+   "order": 0,
+   "category": "पैसा",
+   "excerpt": "जयपुर में पशु डॉक्टर के यहाँ आप असल में क्या देते हैं: कंसल्ट फ़ीस, टीके, ख़ून की जाँच, एक्स-रे और सर्जरी, असली आँकड़ों के साथ, और बिल किस चीज़ से बढ़ता है।",
+   "image": {
+    "url": "https://images.unsplash.com/photo-1654895716780-b4664497420d?w=900&h=560&q=72&auto=format&fit=crop",
+    "alt": "कुत्ते को गोद में लिए एक व्यक्ति"
+   }
+  },
+  {
+   "slug": "blog",
+   "type": "page",
+   "title": "ब्लॉग",
+   "document_title": "ब्लॉग · ekam vets, जयपुर",
+   "description": "जयपुर के पालतू मालिकों के लिए काम की बातें: टीकों का शेड्यूल, टिक फ़ीवर, लू, डॉक्टर का ख़र्च, फ़िज़ियोथेरेपी और सड़क के जानवरों का प्राथमिक इलाज।",
+   "template": "home"
+  },
+  {
+   "slug": "community",
+   "type": "page",
+   "title": "कम्युनिटी और सड़क के जानवर",
+   "document_title": "कम्युनिटी और सड़क के जानवर · ekam vets, जयपुर",
+   "description": "ekam vets में सड़क के जानवरों का इलाज मुफ़्त है। विद्याधर नगर, शास्त्री नगर और झोटवाड़ा के फ़ीडर और रेस्क्यूअर को कम दर मिलती है।",
+   "template": "page"
+  },
+  {
+   "slug": "faq",
+   "type": "page",
+   "title": "सवाल-जवाब",
+   "document_title": "सवाल-जवाब · ekam vets, जयपुर",
+   "description": "ekam vets की पहली विज़िट से पहले पूछे जाने वाले सवाल: समय, इमरजेंसी, क़ीमतें, क्या साथ लाना है, और इंटीग्रेटेड केयर का मतलब।",
+   "template": "page"
+  },
+  {
+   "slug": "index",
+   "type": "page",
+   "title": "होम",
+   "document_title": "ekam vets · इंटीग्रेटेड होलिस्टिक वेट्स, विद्याधर नगर, जयपुर",
+   "description": "विद्याधर नगर, जयपुर में सोच-समझकर की गई, प्राकृतिक और इंटीग्रेटेड पशु चिकित्सा। दवा, फ़िज़ियोथेरेपी, अपनी लैब, भर्ती वार्ड और ऑपरेशन थिएटर एक ही छत के नीचे। कंसल्ट 350 रुपये।",
+   "template": "front-page"
+  },
+  {
+   "slug": "integrated-care",
+   "type": "page",
+   "title": "इंटीग्रेटेड केयर",
+   "document_title": "इंटीग्रेटेड केयर · ekam vets, जयपुर",
+   "description": "ekam vets में इंटीग्रेटेड होलिस्टिक कंसल्ट कैसा होता है: छह क़दम, चार तरह की देखभाल, एक फ़ाइल। विद्याधर नगर, जयपुर।",
+   "template": "page"
+  },
+  {
+   "slug": "rates",
+   "type": "page",
+   "title": "रेट कार्ड",
+   "document_title": "रेट कार्ड · ekam vets, जयपुर",
+   "description": "ekam vets, विद्याधर नगर, जयपुर में कंसल्टेशन, टीके, लैब टेस्ट, इमेजिंग, फ़िज़ियोथेरेपी और ग्रूमिंग की छपी हुई क़ीमतें।",
+   "template": "page"
+  },
+  {
+   "slug": "services",
+   "type": "page",
+   "title": "सेवाएँ",
+   "document_title": "सेवाएँ · ekam vets, विद्याधर नगर, जयपुर",
+   "description": "क्लिनिक और दवा, सर्जरी, फ़िज़ियोथेरेपी, अपनी लैब और इमेजिंग, ग्रूमिंग। ekam vets जो कुछ करता है, उसकी क़ीमत के साथ।",
+   "template": "page"
+  },
+  {
+   "slug": "thanks",
+   "type": "page",
+   "title": "अनुरोध मिल गया",
+   "document_title": "अनुरोध मिल गया · ekam vets, जयपुर",
+   "description": "आपका बुकिंग अनुरोध ekam vets, विद्याधर नगर, जयपुर तक पहुँच गया है। हम व्हाट्सऐप पर पुष्टि करते हैं, आम तौर पर उसी दिन।",
+   "template": "page"
+  },
+  {
+   "slug": "visit",
+   "type": "page",
+   "title": "आएँ और बुक करें",
+   "document_title": "आएँ और बुक करें · ekam vets, विद्याधर नगर, जयपुर",
+   "description": "ekam vets, विद्याधर नगर, जयपुर के क्लिनिक का समय, पता, फ़ोन और व्हाट्सऐप। कंसल्ट, फ़िज़ियोथेरेपी आकलन या ग्रूमिंग स्लॉट बुक कीजिए।",
+   "template": "page"
+  }
+ ]
+}

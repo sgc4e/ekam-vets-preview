@@ -1,0 +1,19 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/",
+	"login": true,
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"steps": [
+		{
+			"step": "activateTheme",
+			"themeFolderName": "ekam-vets"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php';\nforeach ( array( 'hello-world' => 'post', 'sample-page' => 'page' ) as $s => $t ) { if ( $p = get_page_by_path( $s, OBJECT, $t ) ) { wp_delete_post( $p->ID, true ); } }\nrequire '/wordpress/ekam-src/import.php';"
+		}
+	]
+}
