@@ -44,7 +44,7 @@ SCHEMA = """<script type="application/ld+json">
   "url":"%(base)s/",
   "logo":"%(base)s/img/logo.png",
   "image":"%(base)s/img/logo.png",
-  "telephone":"+919082053255",
+  "telephone":"+919165931975",
   "currenciesAccepted":"INR",
   "paymentAccepted":"Cash, UPI, Card",
   "address":{"@type":"PostalAddress","streetAddress":"134, Sector 1, Vidyadhar Nagar","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"},

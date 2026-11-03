@@ -175,7 +175,7 @@ ssh -i ~/.ssh/wearec4e_hostinger -p 65002 u716426288@145.79.210.56 \
   'tail -40 domains/ekamvets.com/form-log.txt'
 ```
 
-A WhatsApp button (`wa.me/919082053255`, prefilled) sits beside the submit button as the
+A WhatsApp button (`wa.me/919165931975`, prefilled) sits beside the submit button as the
 channel that needs no configuration.
 
 ---
@@ -282,7 +282,7 @@ Open, in rough priority order:
 
 ## 10. Facts
 
-- Phone / WhatsApp / emergency: **+91 90820 53255**
+- Phone / WhatsApp / emergency: **+91 91659 31975**
 - Address: **Sector 1, Vidyadhar Nagar, Jaipur 302039**
 - Email: hello@ekamvets.com
 - Hours: Mon–Sat 9am–8pm, Sun 10am–2pm
