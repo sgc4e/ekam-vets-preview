@@ -11,6 +11,7 @@ Slug scheme: <file>.html -> /<file>/ , index.html -> / . Blog posts keep their
 file name as slug (/blog-heat-stroke/). Hindi pages link to /hi/<slug>/ and
 /hi/ for the home page.
 """
+import ast
 import json
 import re
 import sys
@@ -32,6 +33,7 @@ UTIL = {
     "margin-top:16px": "u-mt-16",
     "margin-top:26px": "u-mt-26",
     "margin-top:30px": "u-mt-30",
+    "margin-top:32px": "u-mt-32",
     "margin-top:34px": "u-mt-34",
     "margin-top:40px": "u-mt-40",
     "margin-bottom:24px": "u-mb-24",
@@ -390,13 +392,24 @@ def blog_cards(lang_dir):
     return cards
 
 
+def hidden_slugs():
+    """Pages build.py keeps off the live static site stay out of WordPress too. One list, two sites."""
+    m = re.search(r"^HIDDEN\s*=\s*(\{.*?\})", (SRC / "build.py").read_text(encoding="utf-8"), re.M)
+    return {Path(n).stem for n in ast.literal_eval(m.group(1))} if m else set()
+
+
 def convert_lang(lang):
     src_dir = SRC if lang == "en" else SRC / "hi"
     (OUT / lang).mkdir(parents=True, exist_ok=True)
     cards = blog_cards(src_dir)
     entries, found = [], {}
+    hidden = hidden_slugs()
+    for stale in hidden:
+        (OUT / lang / f"{stale}.html").unlink(missing_ok=True)
     for path in sorted(src_dir.glob("*.html")):
         slug = path.stem
+        if slug in hidden:
+            continue
         title, desc, body = page_parts(path)
         root = parse(body)
         if slug == "blog":  # the Query Loop in templates/home.html replaces the static card grid
@@ -431,7 +444,8 @@ def main():
     for lang in ("en", "hi"):
         print(f"{lang}:")
         manifest[lang], found = convert_lang(lang)
-        want = {"services", "rates", "blog-homeopathy-for-pets"}
+        # rates dropped 18 Oct 2026: Parry removed the "indicative, confirmed at reception" line.
+        want = {"services", "blog-homeopathy-for-pets"}
         if set(found) != want:
             sys.exit(f"lock check failed for {lang}: expected {sorted(want)}, got {sorted(found)}")
         print(f"  wrote {len(manifest[lang])} files to content/{lang}/")

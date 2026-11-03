@@ -77,7 +77,8 @@ function ekam_category( $name ) {
 function ekam_upsert( array $e, $lang, $dir ) {
 	$slug    = 'index' === $e['slug'] ? 'home' : $e['slug'];
 	$content = file_get_contents( "$dir/content/$lang/{$e['slug']}.html" );
-	$content = str_replace( '{{theme}}', content_url( 'themes/ekam-vets' ), $content );
+	// Root-relative, so the same content works on staging and on ekamvets.com without a search-replace.
+	$content = str_replace( '{{theme}}', wp_make_link_relative( content_url( 'themes/ekam-vets' ) ), $content );
 	$found   = get_page_by_path( $slug, OBJECT, $e['type'] );
 
 	$post = array(
