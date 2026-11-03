@@ -292,3 +292,18 @@ Open, in rough priority order:
   kitchen, washroom, staff room, small temple.
 - Nine services: wellness exams, physiotherapy, in-house lab, surgery/OT/IPD, grooming,
   homeopathy, herbal medicine, massage and acupuncture, senior and palliative care.
+
+---
+
+## 11. WordPress staging (3 Nov 2026)
+
+- **https://ekamvets.com/staging/** — WordPress, English only, `noindex`. Built from `wp/` on branch history up to 20aa57d.
+- Lives inside the live webroot at `public_html/staging/`. `deploy.sh` rsyncs with `--exclude=/staging/`; **never remove that flag** or the next static deploy deletes staging.
+- Database is SQLite (no hPanel needed): `~/ekam-wp-staging-db/.ht.sqlite`, outside the webroot.
+- Admin login is in `~/ekam-wp-staging-admin.txt` on the server (mode 600). Claude never prints it. SG reads it with
+  `ssh -i ~/.ssh/wearec4e_hostinger -p 65002 u716426288@145.79.210.56 'cat ~/ekam-wp-staging-admin.txt'`
+- Source copy for re-imports: `~/ekam-wp-src/wp`. Re-import after a static edit:
+  `python3 wp/convert.py` on the Mac, `git archive HEAD wp` to `~/ekam-wp-src`, then
+  `cd ~/ekam-wp-src/wp && wp --path=$HOME/domains/ekamvets.com/public_html/staging eval-file import.php --user=sg`
+- The staging booking form posts to the **live** `/send.php`, so a test submission lands in the real `form-log.txt`. Mark tests "TEST".
+- Hindi: SG, 3 Nov 2026, skip for now. WordPress is English only; the static `hi/` stays at the domain root and the menu links to it.
