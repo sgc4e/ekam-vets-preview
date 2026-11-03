@@ -18,6 +18,10 @@ add_action( 'template_redirect', function () {
 	$uri  = $_SERVER['REQUEST_URI'] ?? '';
 	$path = (string) wp_parse_url( $uri, PHP_URL_PATH );
 	$qs   = (string) wp_parse_url( $uri, PHP_URL_QUERY );
+	$base = untrailingslashit( (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH ) );
+	if ( $base && str_starts_with( $path, $base . '/' ) ) {
+		$path = substr( $path, strlen( $base ) );
+	}
 
 	if ( '/sitemap.xml' === $path ) {
 		wp_safe_redirect( home_url( '/wp-sitemap.xml' ), 301 );
@@ -140,3 +144,19 @@ add_action( 'template_redirect', function () {
 		exit;
 	}
 } );
+
+/*
+ * 5. Subfolder installs (staging at ekamvets.com/staging/). Content, header, footer and tab bar
+ *    link root-relative ("/visit/"). Prefix them with the install path so they stay inside the
+ *    install. On ekamvets.com the path is "/" and this does nothing.
+ *    Left alone: /hi/ (the static Hindi site stays at the domain root), /wp-* paths, and
+ *    links already carrying the prefix.
+ */
+add_filter( 'render_block', function ( $html ) {
+	$base = untrailingslashit( (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH ) );
+	if ( '' === $base ) {
+		return $html;
+	}
+	$q = preg_quote( $base, '#' );
+	return preg_replace( '#href="/(?!/|hi/|wp-|' . ltrim( $q, '/' ) . '/)#', 'href="' . $base . '/', $html );
+}, 5 );

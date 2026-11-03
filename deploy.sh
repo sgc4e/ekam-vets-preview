@@ -19,7 +19,7 @@ curl -s -A 'Mozilla/5.0' "https://$DOMAIN/sitemap.xml" -o "$OLD_SITEMAP" || true
 echo "--- uploading ---"
 chmod -R a+rX dist
 # macOS ships openrsync, which has no --chmod; the chmod -R above already sets the modes
-rsync -az --delete -e "ssh -i $KEY -p $PORT" dist/ "$HOST:$REMOTE"
+rsync -az --delete --exclude=/staging/ -e "ssh -i $KEY -p $PORT" dist/ "$HOST:$REMOTE"
 echo "--- live ---"
 for p in "" hi/ blog.html rates.html sitemap.xml robots.txt; do
   printf "%-16s %s\n" "/$p" "$(curl -s -o /dev/null -w '%{http_code}' https://$DOMAIN/$p)"
