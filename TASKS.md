@@ -47,3 +47,7 @@
 - [~] GA4 — skipped: no measurement ID in repo or master.env; SG to create the property
 - [x] Deployed live (2c5fb64), IndexNow 202 for 30 URLs — 2026-10-23
 - [x] Phone number changed to +91 91659 31975 everywhere (70 occurrences, 42 files: EN + HI pages, _hi8.json dictionary, JSON-LD, WhatsApp links, wp/ migration content) and deployed live — 2026-11-03
+- [x] Tagline "Integrated holistic vets" to "Compassionate holistic care" on all EN/HI pages, WP source too (2026-11-07)
+- [x] Location: "Get directions" Google Maps link in every footer, map embed + "Open in Google Maps" on Visit, hasMap in JSON-LD (2026-11-07)
+- [ ] Swap the address-search map link for the Google Business Profile pin once the profile exists
+- [x] Deploy tagline + location changes live (2026-11-07)

@@ -124,7 +124,7 @@ $en = $ids['en'];
 
 // Site identity. The brand is lower case.
 update_option( 'blogname', 'ekam vets' );
-update_option( 'blogdescription', 'Integrated holistic vets' );
+update_option( 'blogdescription', 'Compassionate holistic care' );
 update_option( 'site_logo', ekam_theme_image( 'logo-mark-t.png' ) );
 
 // Static front page and posts page.
