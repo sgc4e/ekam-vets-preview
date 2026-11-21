@@ -51,3 +51,5 @@
 - [x] Location: "Get directions" Google Maps link in every footer, map embed + "Open in Google Maps" on Visit, hasMap in JSON-LD (2026-11-07)
 - [ ] Swap the address-search map link for the Google Business Profile pin once the profile exists
 - [x] Deploy tagline + location changes live (2026-11-07)
+
+- [ ] SEO-Desk intake 21 Nov 2026: run new checks D17 (retitle low-CTR pages), D18 (links from click-earning pages), D19 (hub pages), E27 (vs pages only on demand), I10 (translate by language demand) and sharpened D4, E3, L6, L7 from SEO-Desk/knowledge/SEO-CHECKLIST.md
