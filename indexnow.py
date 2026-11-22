@@ -7,7 +7,7 @@ deploy.sh saves the live sitemap before uploading, then calls this after. Any UR
 that is new, or whose <lastmod> differs from the old copy, is sent. One POST
 reaches Bing, Yandex, Naver, Seznam and Yep. Google does not take part.
 """
-import glob, json, re, sys, urllib.request
+import glob, json, re, sys, urllib.request, urllib.error
 
 def entries(xml):
     return dict(re.findall(r'<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>', xml))
@@ -32,7 +32,14 @@ if __name__ == '__main__':
     body = json.dumps({'host': domain, 'key': key,
                        'keyLocation': 'https://%s/%s.txt' % (domain, key),
                        'urlList': urls}).encode()
-    req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body,
-                                 headers={'Content-Type': 'application/json; charset=utf-8'})
-    with urllib.request.urlopen(req) as r:
-        print('IndexNow %s: %d URLs submitted' % (r.status, len(urls)))
+    # api.indexnow.org relays Bing's answer. Bing has refused this host since Nov 2026
+    # (403 UserForbiddedToAccessSite) while Yandex accepts the same key, so try Yandex too.
+    ok = False
+    for ep in ('https://api.indexnow.org/indexnow', 'https://yandex.com/indexnow'):
+        req = urllib.request.Request(ep, data=body, headers={'Content-Type': 'application/json; charset=utf-8'})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                print('IndexNow %s %s: %d URLs submitted' % (ep, r.status, len(urls))); ok = True
+        except urllib.error.HTTPError as e:
+            print('IndexNow %s %s: %s' % (ep, e.code, e.read()[:160].decode('utf-8', 'replace')))
+    sys.exit(0 if ok else 1)

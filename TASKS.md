@@ -67,5 +67,6 @@
 - [ ] E1: SG verifies Search Console (DNS TXT or HTML tag), submits sitemap, creates GA4
 - [ ] E7: clinic creates the Google Business Profile with the exact NAP string
 - [x] Deployed seo-2026-11-22 live on SG's OK (95c3e60, merged to main) — 2026-11-22
-- [ ] IndexNow ping returns 403 UserForbiddedToAccessSite on both api.indexnow.org and bing.com, though the key file serves 200 with the right key. Look at why Bing cannot verify it
+- [x] IndexNow 403 diagnosed: key valid (Yandex 202/200, Seznam 200), only Bing refuses. Hostinger's platform layer 403s any bingbot/Googlebot user agent on this account (ekamvets, wearec4e; no .htaccess rule), the likely reason Bing's key check failed. indexnow.py now also pings Yandex; 30 URLs sent — 2026-11-22
+- [ ] SG: add ekamvets.com to Bing Webmaster Tools (import from Search Console after E1) and check Bing's crawl/URL inspection; if Bingbot is blocked, raise it with Hostinger support
 - [ ] Mirror E2/E3/E5 into the WordPress staging port (wp/) before cutover
