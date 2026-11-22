@@ -1,5 +1,15 @@
 # ekam vets site: tasks
 
+## Next time: remind SG first (set 22 Nov 2026)
+
+- [ ] SG: verify Search Console (Domain property, TXT record in Hostinger DNS), submit https://ekamvets.com/sitemap.xml, create GA4
+- [ ] SG: add the site to Bing Webmaster Tools (import from Search Console) and check whether Bingbot is blocked; if so, raise it with Hostinger. Also ask Hostinger why GPTBot gets 429
+- [ ] Clinic: create the Google Business Profile with exactly: ekam vets · 134, Sector 1, Vidyadhar Nagar, Jaipur 302039 · +91 91659 31975 · Mon to Sat 9am to 8pm, Sun 10am to 2pm. Then swap the map link and hasMap to the profile pin
+- [ ] Clinic: confirm prices in writing (E22), then fix the vet-cost post's prices, remove it from HIDDEN in build.py and fill the rate card
+- [ ] Clinic: real photos, then drop the "Placeholder photography" footer line (E6)
+- [ ] Native Hindi check of the 10 new strings in _hi10.json
+- [ ] Mirror the 22 Nov SEO changes into the WordPress port (wp/) before cutover
+
 ## Done
 
 - [x] Build English preview site, 17 pages (2026-08-29)
@@ -54,7 +64,7 @@
 
 - [ ] SEO-Desk intake 21 Nov 2026: run new checks D17 (retitle low-CTR pages), D18 (links from click-earning pages), D19 (hub pages), E27 (vs pages only on demand), I10 (translate by language demand) and sharpened D4, E3, L6, L7 from SEO-Desk/knowledge/SEO-CHECKLIST.md
 
-## SEO pass 22 Nov 2026 (branch seo-2026-11-22, not deployed)
+## SEO pass 22 Nov 2026 (deployed live 22 Nov, 95c3e60)
 
 - [x] E2: "veterinary clinic" in home title, H1 sub-line and first sentence, EN + HI — 2026-11-22
 - [x] E3: phone is a tel:+919165931975 link everywhere it appears (22 places, EN; HI regenerated) — 2026-11-22
