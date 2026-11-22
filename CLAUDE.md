@@ -97,7 +97,7 @@ PY
 ```
 
 Bump the `v=` number whenever `style.css` changes. Chrome serves stale CSS otherwise;
-this cost real debugging time. Current version is **v19**, so the next edit uses v20.
+this cost real debugging time. Current version is **v20**, so the next edit uses v21.
 
 ---
 

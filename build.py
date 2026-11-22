@@ -74,7 +74,10 @@ def title_of(s):
 def desc_of(s):
     m = re.search(r'name="description" content="([^"]*)"', s); return m.group(1) if m else ''
 
-HIDDEN = {'blog-vet-cost-jaipur.html'}  # hidden 18 Oct 2026 on SG's call; source kept
+HIDDEN = {'blog-vet-cost-jaipur.html'}  # hidden 18 Oct 2026 on SG's call; source kept.
+# To publish a hidden post: remove it here. Its card in blog.html ships automatically.
+# blog-vet-cost-jaipur.html carries unconfirmed prices: un-hide only after the clinic confirms them in writing (E22).
+GSC_TOKEN = os.environ.get('GSC_VERIFICATION', '')  # Search Console HTML-tag token (content="..."), home page only
 pages = []
 for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     if os.path.basename(src).startswith('_') or os.path.basename(src) in HIDDEN: continue
@@ -83,6 +86,12 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     name = os.path.basename(src)
     url = '%s/hi/%s' % (BASE, name) if hi else '%s/%s' % (BASE, name)
     if name == 'index.html': url = url[:-len('index.html')]
+
+    # drop blog cards that point at hidden posts
+    for h in HIDDEN:
+        s = re.sub(r'\s*<a class="postcard" href="%s">.*?</a>' % re.escape(h), '', s, flags=re.S)
+    if GSC_TOKEN and name == 'index.html' and not hi:
+        s = s.replace('<link rel="icon"', '<meta name="google-site-verification" content="%s">\n<link rel="icon"' % GSC_TOKEN, 1)
 
     # robots
     if NOINDEX or name == 'thanks.html':

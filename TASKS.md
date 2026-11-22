@@ -53,3 +53,18 @@
 - [x] Deploy tagline + location changes live (2026-11-07)
 
 - [ ] SEO-Desk intake 21 Nov 2026: run new checks D17 (retitle low-CTR pages), D18 (links from click-earning pages), D19 (hub pages), E27 (vs pages only on demand), I10 (translate by language demand) and sharpened D4, E3, L6, L7 from SEO-Desk/knowledge/SEO-CHECKLIST.md
+
+## SEO pass 22 Nov 2026 (branch seo-2026-11-22, not deployed)
+
+- [x] E2: "veterinary clinic" in home title, H1 sub-line and first sentence, EN + HI — 2026-11-22
+- [x] E3: phone is a tel:+919165931975 link everywhere it appears (22 places, EN; HI regenerated) — 2026-11-22
+- [x] E5: blog read-on links from services (limping, tick fever, homeopathy), FAQ + rates (vaccination), visit (heat stroke), community (street dog first aid) — 2026-11-22
+- [x] E4: vet-cost card back in blog.html; build.py strips it while the post is in HIDDEN. Post stays hidden: its prices are unconfirmed — 2026-11-22
+- [x] E1 prep: build.py injects google-site-verification on the home page when GSC_VERIFICATION is set — 2026-11-22
+- [x] style.css v20 (h1 sub-line, read-on links, tel links) — 2026-11-22
+- [ ] E6: remove "Placeholder photography from Unsplash" footer line once real clinic photos are in img/ (none yet)
+- [ ] E22: clinic confirms prices in writing, then fix blog-vet-cost-jaipur.html prices, un-hide it, fill the rate card
+- [ ] E1: SG verifies Search Console (DNS TXT or HTML tag), submits sitemap, creates GA4
+- [ ] E7: clinic creates the Google Business Profile with the exact NAP string
+- [ ] SG's OK to deploy branch seo-2026-11-22 to ekamvets.com
+- [ ] Mirror E2/E3/E5 into the WordPress staging port (wp/) before cutover
