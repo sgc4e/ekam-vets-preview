@@ -66,5 +66,6 @@
 - [ ] E22: clinic confirms prices in writing, then fix blog-vet-cost-jaipur.html prices, un-hide it, fill the rate card
 - [ ] E1: SG verifies Search Console (DNS TXT or HTML tag), submits sitemap, creates GA4
 - [ ] E7: clinic creates the Google Business Profile with the exact NAP string
-- [ ] SG's OK to deploy branch seo-2026-11-22 to ekamvets.com
+- [x] Deployed seo-2026-11-22 live on SG's OK (95c3e60, merged to main) — 2026-11-22
+- [ ] IndexNow ping returns 403 UserForbiddedToAccessSite on both api.indexnow.org and bing.com, though the key file serves 200 with the right key. Look at why Bing cannot verify it
 - [ ] Mirror E2/E3/E5 into the WordPress staging port (wp/) before cutover
