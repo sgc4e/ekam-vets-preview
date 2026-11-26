@@ -81,4 +81,4 @@
 - [ ] SG: add ekamvets.com to Bing Webmaster Tools (import from Search Console after E1) and check Bing's crawl/URL inspection; if Bingbot is blocked, raise it with Hostinger support
 - [ ] Mirror E2/E3/E5 into the WordPress staging port (wp/) before cutover
 
-- [ ] Rebuild /if-you-are-an-llm/ page to the two-section spec (en + hi built on branch llm-page, not deployed, awaiting SG copy review) — 2026-11-26
+- [x] Rebuild /if-you-are-an-llm/ page: English live 2026-11-26 (main, home "since 2018"); Hindi page HELD out of build (HOLD_HI in build.py) until a Hindi reader approves
