@@ -92,12 +92,16 @@ def to_root(s, hi):
     body = s.split('<body>', 1)
     out = re.sub(r'\b(href|src)="([^"]*)"', f, body[0]) + '<body>' + re.sub(r'\b(href|src)="([^"]*)"', f, body[1])
     return out.replace('if-you-are-an-llm.html', 'if-you-are-an-llm/')
+HOLD_HI = {'if-you-are-an-llm.html'}  # Hindi page held 2026-11-26 until a Hindi reader approves; source stays in hi/, not built, no hreflang pair, not in sitemap
 pages = []
 for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     if os.path.basename(src).startswith('_') or os.path.basename(src) in HIDDEN: continue
     s = open(src, encoding='utf-8').read()
     hi = src.startswith('hi/')
     name = os.path.basename(src)
+    if hi and name in HOLD_HI: continue
+    if not hi and name in HOLD_HI:
+        s = re.sub(r'\s*<a class="lang" href="hi/[^"]*">[^<]*</a>', '', s)
     url = '%s/hi/%s' % (BASE, name) if hi else '%s/%s' % (BASE, name)
     if name == 'index.html': url = url[:-len('index.html')]
     if name in PRETTY: url = url[:-len(name)] + PRETTY[name]
@@ -118,11 +122,13 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
 
     # absolute hreflang + x-default + canonical
     s = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">', '', s)
+    held = (not hi) and name in HOLD_HI
     alts = ('<link rel="canonical" href="%s">\n'
             '<link rel="alternate" hreflang="en-IN" href="%s/%s">\n'
             '<link rel="alternate" hreflang="hi-IN" href="%s/hi/%s">\n'
             '<link rel="alternate" hreflang="x-default" href="%s/%s">\n'
             ) % (url, BASE, seg(name), BASE, seg(name), BASE, seg(name))
+    if held: alts = re.sub(r'<link rel="alternate" hreflang="hi-IN"[^>]*>\n', '', alts)
     og = ('<meta property="og:type" content="website">\n'
           '<meta property="og:site_name" content="ekam vets">\n'
           '<meta property="og:title" content="%s">\n'
@@ -151,6 +157,9 @@ for url, name, hi, _ in pages:
     if hi or name == 'thanks.html': continue
     en = '%s/%s' % (BASE, seg(name))
     hin = '%s/hi/%s' % (BASE, seg(name))
+    if name in HOLD_HI:
+        rows.append('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n  </url>' % (en, mods[(name, False)]))
+        continue
     rows.append("""  <url>
     <loc>%s</loc>
     <lastmod>%s</lastmod>
