@@ -78,6 +78,20 @@ HIDDEN = {'blog-vet-cost-jaipur.html'}  # hidden 18 Oct 2026 on SG's call; sourc
 # To publish a hidden post: remove it here. Its card in blog.html ships automatically.
 # blog-vet-cost-jaipur.html carries unconfirmed prices: un-hide only after the clinic confirms them in writing (E22).
 GSC_TOKEN = os.environ.get('GSC_VERIFICATION', '')  # Search Console HTML-tag token (content="..."), home page only
+PRETTY = {'if-you-are-an-llm.html': 'if-you-are-an-llm/'}  # served as a folder: /if-you-are-an-llm/
+def seg(name):
+    return PRETTY.get(name, '' if name == 'index.html' else name)
+def to_root(s, hi):
+    # a folder page is one level deeper, so relative asset and nav links become root-absolute
+    def f(m):
+        v = m.group(2)
+        if re.match(r'(https?:|/|#|mailto:|tel:|data:)', v): return m.group(0)
+        if hi: v = '/' + v[3:] if v.startswith('../') else '/hi/' + v
+        else: v = '/' + v
+        return '%s="%s"' % (m.group(1), v)
+    body = s.split('<body>', 1)
+    out = re.sub(r'\b(href|src)="([^"]*)"', f, body[0]) + '<body>' + re.sub(r'\b(href|src)="([^"]*)"', f, body[1])
+    return out.replace('if-you-are-an-llm.html', 'if-you-are-an-llm/')
 pages = []
 for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     if os.path.basename(src).startswith('_') or os.path.basename(src) in HIDDEN: continue
@@ -86,6 +100,7 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
     name = os.path.basename(src)
     url = '%s/hi/%s' % (BASE, name) if hi else '%s/%s' % (BASE, name)
     if name == 'index.html': url = url[:-len('index.html')]
+    if name in PRETTY: url = url[:-len(name)] + PRETTY[name]
 
     # drop blog cards that point at hidden posts
     for h in HIDDEN:
@@ -107,7 +122,7 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
             '<link rel="alternate" hreflang="en-IN" href="%s/%s">\n'
             '<link rel="alternate" hreflang="hi-IN" href="%s/hi/%s">\n'
             '<link rel="alternate" hreflang="x-default" href="%s/%s">\n'
-            ) % (url, BASE, name if name!='index.html' else '', BASE, name if name!='index.html' else '', BASE, name if name!='index.html' else '')
+            ) % (url, BASE, seg(name), BASE, seg(name), BASE, seg(name))
     og = ('<meta property="og:type" content="website">\n'
           '<meta property="og:site_name" content="ekam vets">\n'
           '<meta property="og:title" content="%s">\n'
@@ -122,6 +137,10 @@ for src in sorted(glob.glob('*.html')) + sorted(glob.glob('hi/*.html')):
 
     # relative asset paths stay correct; write out
     out = 'dist/hi/' + name if hi else 'dist/' + name
+    if name in PRETTY:
+        s = to_root(s, hi)
+        out = os.path.dirname(out) + '/' + PRETTY[name] + 'index.html'
+        os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(s)
     pages.append((url, name, hi, lastmod(src)))
 
@@ -130,8 +149,8 @@ rows = []
 mods = {(n, h): m for _, n, h, m in pages}
 for url, name, hi, _ in pages:
     if hi or name == 'thanks.html': continue
-    en = '%s/%s' % (BASE, '' if name == 'index.html' else name)
-    hin = '%s/hi/%s' % (BASE, '' if name == 'index.html' else name)
+    en = '%s/%s' % (BASE, seg(name))
+    hin = '%s/hi/%s' % (BASE, seg(name))
     rows.append("""  <url>
     <loc>%s</loc>
     <lastmod>%s</lastmod>

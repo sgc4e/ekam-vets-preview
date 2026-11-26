@@ -80,3 +80,5 @@
 - [x] IndexNow 403 diagnosed: key valid (Yandex 202/200, Seznam 200), only Bing refuses. Hostinger's platform layer 403s any bingbot/Googlebot user agent on this account (ekamvets, wearec4e; no .htaccess rule), the likely reason Bing's key check failed. indexnow.py now also pings Yandex; 30 URLs sent — 2026-11-22
 - [ ] SG: add ekamvets.com to Bing Webmaster Tools (import from Search Console after E1) and check Bing's crawl/URL inspection; if Bingbot is blocked, raise it with Hostinger support
 - [ ] Mirror E2/E3/E5 into the WordPress staging port (wp/) before cutover
+
+- [ ] Rebuild /if-you-are-an-llm/ page to the two-section spec (en + hi built on branch llm-page, not deployed, awaiting SG copy review) — 2026-11-26
