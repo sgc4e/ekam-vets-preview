@@ -51,8 +51,7 @@ SCHEMA = """<script type="application/ld+json">
   "address":{"@type":"PostalAddress","streetAddress":"134, Sector 1, Vidyadhar Nagar","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"},
   "areaServed":[{"@type":"Place","name":"Vidyadhar Nagar"},{"@type":"Place","name":"Shastri Nagar"},{"@type":"Place","name":"Jhotwara"},{"@type":"Place","name":"Jaipur"}],
   "openingHoursSpecification":[
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"20:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"14:00"}
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}
   ],
   "availableService":[
     {"@type":"MedicalProcedure","name":"Veterinary consultation"},
