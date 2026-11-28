@@ -47,7 +47,8 @@ SCHEMA = """<script type="application/ld+json">
   "telephone":"+919165931975",
   "currenciesAccepted":"INR",
   "paymentAccepted":"Cash, UPI, Card",
-  "hasMap":"https://www.google.com/maps/search/?api=1&query=134,+Sector+1,+Vidyadhar+Nagar,+Jaipur+302039",
+  "hasMap":"https://maps.app.goo.gl/U7V5LLbgLBvVaVt87",
+  "geo":{"@type":"GeoCoordinates","latitude":26.9511673,"longitude":75.7757389},
   "address":{"@type":"PostalAddress","streetAddress":"134, Sector 1, Vidyadhar Nagar","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302039","addressCountry":"IN"},
   "areaServed":[{"@type":"Place","name":"Vidyadhar Nagar"},{"@type":"Place","name":"Shastri Nagar"},{"@type":"Place","name":"Jhotwara"},{"@type":"Place","name":"Jaipur"}],
   "openingHoursSpecification":[

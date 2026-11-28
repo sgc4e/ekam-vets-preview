@@ -285,7 +285,8 @@ Open, in rough priority order:
 - Phone / WhatsApp / emergency: **+91 91659 31975**
 - Address: **Sector 1, Vidyadhar Nagar, Jaipur 302039**
 - Email: hello@ekamvets.com
-- Hours: Mon–Sat 9am–8pm, Sun 10am–2pm
+- Hours: 24x7 (SG, 28 Nov 2026)
+- Map pin: https://maps.app.goo.gl/U7V5LLbgLBvVaVt87 (26.9511673, 75.7757389)
 - Consult: Rs 350, one free follow-up within seven days
 - Clinic: ~55 × 29.24 ft ground floor, step free. Reception, waiting area, two consulting
   rooms, two treatment rooms (second doubles as OT), dedicated OT, IPD beds, rooms 5 and 8,

@@ -85,3 +85,4 @@
 
 - [x] Rebuild /if-you-are-an-llm/ page: English live 2026-11-26 (main, home "since 2018"); Hindi page HELD out of build (HOLD_HI in build.py) until a Hindi reader approves
 - [x] Hours changed to 24x7 on every page, EN + HI, JSON-LD openingHours Mon-Sun 00:00-23:59 (28 Nov 2026)
+- [x] Map links, visit-page embed and JSON-LD hasMap/geo point to the Google Maps pin maps.app.goo.gl/U7V5LLbgLBvVaVt87 (28 Nov 2026)
