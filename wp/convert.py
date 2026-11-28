@@ -49,6 +49,10 @@ UTIL = {
     "font-family:var(--serif)": "u-serif",
     "font-size:1.5rem": "u-fs-150",
     "color:var(--neem)": "u-neem",
+    "width:100%": "u-w-100",
+    "height:280px": "u-h-280",
+    "border:0": "u-b-0",
+    "margin-top:12px": "u-mt-12",
 }
 
 # Paragraphs that must not be removed or moved (CLAUDE.md section 8).
@@ -365,6 +369,8 @@ class Converter:
             return block("separator", {"className": " ".join(classes)} if classes else None, f'<hr class="{cls}"/>')
         if t == "dl":
             return self.faq(n, classes)
+        if t == "iframe":  # visit-page map embed, kept as raw HTML
+            return self.html(n)
         sys.exit(f"{self.lang}/{self.slug}: no mapping for <{t} class={classes}>")
 
 

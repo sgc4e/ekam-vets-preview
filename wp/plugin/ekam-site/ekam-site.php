@@ -100,13 +100,14 @@ function ekam_schema() {
 			'postalCode'      => '302039',
 			'addressCountry'  => 'IN',
 		),
+		'hasMap'                    => 'https://maps.app.goo.gl/U7V5LLbgLBvVaVt87',
+		'geo'                       => array( '@type' => 'GeoCoordinates', 'latitude' => 26.9511673, 'longitude' => 75.7757389 ),
 		'areaServed'                => array_map(
 			fn( $n ) => array( '@type' => 'Place', 'name' => $n ),
 			array( 'Vidyadhar Nagar', 'Shastri Nagar', 'Jhotwara', 'Jaipur' )
 		),
 		'openingHoursSpecification' => array(
-			array( '@type' => 'OpeningHoursSpecification', 'dayOfWeek' => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ), 'opens' => '09:00', 'closes' => '20:00' ),
-			array( '@type' => 'OpeningHoursSpecification', 'dayOfWeek' => 'Sunday', 'opens' => '10:00', 'closes' => '14:00' ),
+			array( '@type' => 'OpeningHoursSpecification', 'dayOfWeek' => array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ), 'opens' => '00:00', 'closes' => '23:59' ),
 		),
 		'availableService'          => array_map(
 			fn( $n ) => array( '@type' => 'MedicalProcedure', 'name' => $n ),
